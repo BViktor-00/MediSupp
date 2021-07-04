@@ -23,7 +23,7 @@ namespace MediSupp
             {
                 using (SqlConnection Csatlakozas = new SqlConnection(AdatbazisInfo.ServerInfo))
                 {
-                    string feltoltes = "INSERT INTO Orvos VALUES (@orvosneve,@szakterulet,@emailcim,@betegek)";
+                    string feltoltes = "INSERT INTO orvos VALUES (@orvosneve,@szakterulet,@emailcim,@betegek)";
                     using (SqlCommand Parancs = new SqlCommand(feltoltes, Csatlakozas))
                     {
                         Parancs.Parameters.AddWithValue("@orvosneve", nev);
@@ -46,14 +46,14 @@ namespace MediSupp
             }
         }
 
-        public static void OrvosAdatMegjelenites()
+        public static void OrvosAdatAdatLekeres()
 
         {
             try
             {
                 using (SqlConnection Csatlakozas = new SqlConnection(AdatbazisInfo.ServerInfo))
                 {
-                    string lekerdezes = "SELECT * FROM Orvos";
+                    string lekerdezes = "SELECT * FROM orvos";
                     using (SqlCommand Parancs = new SqlCommand(lekerdezes, Csatlakozas))
                     {
                         Csatlakozas.Open();

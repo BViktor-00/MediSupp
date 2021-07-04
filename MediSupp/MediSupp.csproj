@@ -102,11 +102,11 @@
     </Compile>
     <Compile Include="OrvosAdatok.cs" />
     <Compile Include="OrvosFuggvenyek.cs" />
-    <Compile Include="Orvosok.cs">
+    <Compile Include="Orvosok_panel.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Orvosok.Designer.cs">
-      <DependentUpon>Orvosok.cs</DependentUpon>
+    <Compile Include="Orvosok_panel.Designer.cs">
+      <DependentUpon>Orvosok_panel.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -128,8 +128,8 @@
     <EmbeddedResource Include="OrvosAdatlap.resx">
       <DependentUpon>OrvosAdatlap.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Orvosok.resx">
-      <DependentUpon>Orvosok.cs</DependentUpon>
+    <EmbeddedResource Include="Orvosok_panel.resx">
+      <DependentUpon>Orvosok_panel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

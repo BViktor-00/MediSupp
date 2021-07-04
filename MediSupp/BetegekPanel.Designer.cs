@@ -32,9 +32,10 @@ namespace MediSupp
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.betegadatfrissites_bt = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.betegadatmodositas_bt = new System.Windows.Forms.Button();
+            this.betegtorles_bt = new System.Windows.Forms.Button();
             this.BetegDataList = new System.Windows.Forms.DataGridView();
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.betegnev = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -74,13 +75,15 @@ namespace MediSupp
             // 
             // tableLayoutPanel2
             // 
-            this.tableLayoutPanel2.ColumnCount = 3;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel2.ColumnCount = 4;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel2.Controls.Add(this.betegadatfrissites_bt, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.button1, 0, 0);
-            this.tableLayoutPanel2.Controls.Add(this.button2, 1, 0);
-            this.tableLayoutPanel2.Controls.Add(this.button3, 2, 0);
+            this.tableLayoutPanel2.Controls.Add(this.betegadatmodositas_bt, 2, 0);
+            this.tableLayoutPanel2.Controls.Add(this.betegtorles_bt, 3, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 643);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
@@ -89,36 +92,50 @@ namespace MediSupp
             this.tableLayoutPanel2.Size = new System.Drawing.Size(756, 28);
             this.tableLayoutPanel2.TabIndex = 0;
             // 
+            // betegadatfrissites_bt
+            // 
+            this.betegadatfrissites_bt.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.betegadatfrissites_bt.Location = new System.Drawing.Point(192, 3);
+            this.betegadatfrissites_bt.Name = "betegadatfrissites_bt";
+            this.betegadatfrissites_bt.Size = new System.Drawing.Size(183, 22);
+            this.betegadatfrissites_bt.TabIndex = 3;
+            this.betegadatfrissites_bt.Text = "Adatok frissítése";
+            this.betegadatfrissites_bt.UseVisualStyleBackColor = true;
+            this.betegadatfrissites_bt.Click += new System.EventHandler(this.betegadatfrissites_bt_Click);
+            // 
             // button1
             // 
             this.button1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.button1.Location = new System.Drawing.Point(3, 3);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(246, 22);
+            this.button1.Size = new System.Drawing.Size(183, 22);
             this.button1.TabIndex = 0;
             this.button1.Text = "Új Beteg";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button2
+            // betegadatmodositas_bt
             // 
-            this.button2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.button2.Location = new System.Drawing.Point(255, 3);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(246, 22);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Módosítás";
-            this.button2.UseVisualStyleBackColor = true;
+            this.betegadatmodositas_bt.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.betegadatmodositas_bt.Location = new System.Drawing.Point(381, 3);
+            this.betegadatmodositas_bt.Name = "betegadatmodositas_bt";
+            this.betegadatmodositas_bt.Size = new System.Drawing.Size(183, 22);
+            this.betegadatmodositas_bt.TabIndex = 1;
+            this.betegadatmodositas_bt.Text = "Módosítás";
+            this.betegadatmodositas_bt.UseVisualStyleBackColor = true;
+            this.betegadatmodositas_bt.Click += new System.EventHandler(this.betegadatmodositas_bt_Click);
             // 
-            // button3
+            // betegtorles_bt
             // 
-            this.button3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.button3.Location = new System.Drawing.Point(507, 3);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(246, 22);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "Beteg törlése";
-            this.button3.UseVisualStyleBackColor = true;
+            this.betegtorles_bt.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.betegtorles_bt.Location = new System.Drawing.Point(570, 3);
+            this.betegtorles_bt.Name = "betegtorles_bt";
+            this.betegtorles_bt.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.betegtorles_bt.Size = new System.Drawing.Size(183, 22);
+            this.betegtorles_bt.TabIndex = 2;
+            this.betegtorles_bt.Text = "Beteg törlése";
+            this.betegtorles_bt.UseVisualStyleBackColor = true;
+            this.betegtorles_bt.Click += new System.EventHandler(this.betegtorles_bt_Click);
             // 
             // BetegDataList
             // 
@@ -190,8 +207,8 @@ namespace MediSupp
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button betegadatmodositas_bt;
+        private System.Windows.Forms.Button betegtorles_bt;
         private System.Windows.Forms.DataGridView BetegDataList;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridViewTextBoxColumn id;
@@ -199,5 +216,6 @@ namespace MediSupp
         private System.Windows.Forms.DataGridViewTextBoxColumn szulhely;
         private System.Windows.Forms.DataGridViewTextBoxColumn szulido;
         private System.Windows.Forms.DataGridViewTextBoxColumn tajszam;
+        private System.Windows.Forms.Button betegadatfrissites_bt;
     }
 }

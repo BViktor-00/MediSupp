@@ -44,27 +44,42 @@ namespace MediSupp
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.label6 = new System.Windows.Forms.Label();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
+            this.betegadatmodositas_vegrehajt_bt = new System.Windows.Forms.Button();
             this.BetegFeltoltes_bt = new System.Windows.Forms.Button();
             this.betegadatlapbezar_bt = new System.Windows.Forms.Button();
+            this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.beteginfo_txb = new System.Windows.Forms.TextBox();
+            this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
+            this.betegadatkereses_bt = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.betegtajkeres_txb = new System.Windows.Forms.TextBox();
+            this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
+            this.szoveg_lb = new System.Windows.Forms.Label();
+            this.keresettbetegid_lb = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
+            this.tableLayoutPanel5.SuspendLayout();
+            this.tableLayoutPanel6.SuspendLayout();
+            this.tableLayoutPanel7.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.ColumnCount = 1;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel3, 0, 1);
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel3, 0, 2);
+            this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel7, 0, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 2;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 29.32605F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 70.67395F));
+            this.tableLayoutPanel1.RowCount = 3;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 31.02119F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 68.97881F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(724, 549);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
@@ -84,7 +99,7 @@ namespace MediSupp
             this.tableLayoutPanel2.Controls.Add(this.betegeletkor_txb, 1, 3);
             this.tableLayoutPanel2.Controls.Add(this.betegtajszam_txb, 1, 4);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 3);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 33);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 5;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
@@ -92,7 +107,7 @@ namespace MediSupp
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(718, 155);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(718, 154);
             this.tableLayoutPanel2.TabIndex = 0;
             // 
             // label1
@@ -144,7 +159,7 @@ namespace MediSupp
             this.label5.AutoSize = true;
             this.label5.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label5.Location = new System.Drawing.Point(3, 139);
+            this.label5.Location = new System.Drawing.Point(3, 138);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(101, 16);
             this.label5.TabIndex = 4;
@@ -185,7 +200,7 @@ namespace MediSupp
             // betegtajszam_txb
             // 
             this.betegtajszam_txb.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.betegtajszam_txb.Location = new System.Drawing.Point(110, 132);
+            this.betegtajszam_txb.Location = new System.Drawing.Point(110, 131);
             this.betegtajszam_txb.Name = "betegtajszam_txb";
             this.betegtajszam_txb.Size = new System.Drawing.Size(605, 20);
             this.betegtajszam_txb.TabIndex = 9;
@@ -197,15 +212,15 @@ namespace MediSupp
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel3.Controls.Add(this.label6, 0, 0);
             this.tableLayoutPanel3.Controls.Add(this.tableLayoutPanel4, 0, 2);
-            this.tableLayoutPanel3.Controls.Add(this.beteginfo_txb, 0, 1);
+            this.tableLayoutPanel3.Controls.Add(this.tableLayoutPanel5, 0, 1);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 164);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 193);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 3;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.72043F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 93.27957F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 37F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(718, 382);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(718, 353);
             this.tableLayoutPanel3.TabIndex = 1;
             // 
             // label6
@@ -213,7 +228,7 @@ namespace MediSupp
             this.label6.AutoSize = true;
             this.label6.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label6.Location = new System.Drawing.Point(3, 7);
+            this.label6.Location = new System.Drawing.Point(3, 5);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(712, 16);
             this.label6.TabIndex = 1;
@@ -225,15 +240,27 @@ namespace MediSupp
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.5F));
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.5F));
+            this.tableLayoutPanel4.Controls.Add(this.betegadatmodositas_vegrehajt_bt, 0, 0);
             this.tableLayoutPanel4.Controls.Add(this.BetegFeltoltes_bt, 0, 0);
             this.tableLayoutPanel4.Controls.Add(this.betegadatlapbezar_bt, 2, 0);
             this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(3, 347);
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(3, 318);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 1;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel4.Size = new System.Drawing.Size(712, 32);
             this.tableLayoutPanel4.TabIndex = 2;
+            // 
+            // betegadatmodositas_vegrehajt_bt
+            // 
+            this.betegadatmodositas_vegrehajt_bt.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.betegadatmodositas_vegrehajt_bt.Location = new System.Drawing.Point(285, 6);
+            this.betegadatmodositas_vegrehajt_bt.Name = "betegadatmodositas_vegrehajt_bt";
+            this.betegadatmodositas_vegrehajt_bt.Size = new System.Drawing.Size(138, 23);
+            this.betegadatmodositas_vegrehajt_bt.TabIndex = 3;
+            this.betegadatmodositas_vegrehajt_bt.Text = "Adatok módosítása";
+            this.betegadatmodositas_vegrehajt_bt.UseVisualStyleBackColor = true;
+            this.betegadatmodositas_vegrehajt_bt.Click += new System.EventHandler(this.betegadatmodositas_vegrehajt_bt_Click);
             // 
             // BetegFeltoltes_bt
             // 
@@ -257,13 +284,123 @@ namespace MediSupp
             this.betegadatlapbezar_bt.UseVisualStyleBackColor = true;
             this.betegadatlapbezar_bt.Click += new System.EventHandler(this.betegadatlapbezar_bt_Click);
             // 
+            // tableLayoutPanel5
+            // 
+            this.tableLayoutPanel5.ColumnCount = 1;
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel5.Controls.Add(this.beteginfo_txb, 0, 0);
+            this.tableLayoutPanel5.Controls.Add(this.tableLayoutPanel6, 0, 1);
+            this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel5.Location = new System.Drawing.Point(3, 24);
+            this.tableLayoutPanel5.Name = "tableLayoutPanel5";
+            this.tableLayoutPanel5.RowCount = 2;
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 75.2381F));
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 24.76191F));
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(712, 288);
+            this.tableLayoutPanel5.TabIndex = 3;
+            // 
             // beteginfo_txb
             // 
-            this.beteginfo_txb.Location = new System.Drawing.Point(3, 26);
+            this.beteginfo_txb.Location = new System.Drawing.Point(3, 3);
             this.beteginfo_txb.Multiline = true;
             this.beteginfo_txb.Name = "beteginfo_txb";
-            this.beteginfo_txb.Size = new System.Drawing.Size(712, 315);
-            this.beteginfo_txb.TabIndex = 3;
+            this.beteginfo_txb.Size = new System.Drawing.Size(706, 210);
+            this.beteginfo_txb.TabIndex = 4;
+            // 
+            // tableLayoutPanel6
+            // 
+            this.tableLayoutPanel6.ColumnCount = 3;
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 19.17808F));
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 80.82191F));
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 122F));
+            this.tableLayoutPanel6.Controls.Add(this.betegadatkereses_bt, 2, 1);
+            this.tableLayoutPanel6.Controls.Add(this.label7, 0, 0);
+            this.tableLayoutPanel6.Controls.Add(this.label8, 0, 1);
+            this.tableLayoutPanel6.Controls.Add(this.betegtajkeres_txb, 1, 1);
+            this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel6.Location = new System.Drawing.Point(3, 219);
+            this.tableLayoutPanel6.Name = "tableLayoutPanel6";
+            this.tableLayoutPanel6.RowCount = 2;
+            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 52.77778F));
+            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 47.22222F));
+            this.tableLayoutPanel6.Size = new System.Drawing.Size(706, 66);
+            this.tableLayoutPanel6.TabIndex = 5;
+            // 
+            // betegadatkereses_bt
+            // 
+            this.betegadatkereses_bt.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.betegadatkereses_bt.Location = new System.Drawing.Point(592, 40);
+            this.betegadatkereses_bt.Name = "betegadatkereses_bt";
+            this.betegadatkereses_bt.Size = new System.Drawing.Size(106, 23);
+            this.betegadatkereses_bt.TabIndex = 3;
+            this.betegadatkereses_bt.Text = "Keres";
+            this.betegadatkereses_bt.UseVisualStyleBackColor = true;
+            this.betegadatkereses_bt.Click += new System.EventHandler(this.betegadatkereses_bt_Click);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label7.Location = new System.Drawing.Point(3, 18);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(106, 16);
+            this.label7.TabIndex = 0;
+            this.label7.Text = "Keresés";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label8.Location = new System.Drawing.Point(3, 50);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(106, 16);
+            this.label8.TabIndex = 4;
+            this.label8.Text = "Beteg tajszáma:";
+            // 
+            // betegtajkeres_txb
+            // 
+            this.betegtajkeres_txb.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.betegtajkeres_txb.Location = new System.Drawing.Point(115, 43);
+            this.betegtajkeres_txb.Name = "betegtajkeres_txb";
+            this.betegtajkeres_txb.Size = new System.Drawing.Size(466, 20);
+            this.betegtajkeres_txb.TabIndex = 5;
+            // 
+            // tableLayoutPanel7
+            // 
+            this.tableLayoutPanel7.ColumnCount = 3;
+            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20.50473F));
+            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 79.49527F));
+            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 84F));
+            this.tableLayoutPanel7.Controls.Add(this.szoveg_lb, 0, 0);
+            this.tableLayoutPanel7.Controls.Add(this.keresettbetegid_lb, 1, 0);
+            this.tableLayoutPanel7.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel7.Location = new System.Drawing.Point(3, 3);
+            this.tableLayoutPanel7.Name = "tableLayoutPanel7";
+            this.tableLayoutPanel7.RowCount = 1;
+            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel7.Size = new System.Drawing.Size(718, 24);
+            this.tableLayoutPanel7.TabIndex = 2;
+            // 
+            // szoveg_lb
+            // 
+            this.szoveg_lb.AutoSize = true;
+            this.szoveg_lb.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.szoveg_lb.Location = new System.Drawing.Point(3, 11);
+            this.szoveg_lb.Name = "szoveg_lb";
+            this.szoveg_lb.Size = new System.Drawing.Size(123, 13);
+            this.szoveg_lb.TabIndex = 0;
+            this.szoveg_lb.Text = "Beteg azonosítószáma:";
+            // 
+            // keresettbetegid_lb
+            // 
+            this.keresettbetegid_lb.AutoSize = true;
+            this.keresettbetegid_lb.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.keresettbetegid_lb.Location = new System.Drawing.Point(132, 11);
+            this.keresettbetegid_lb.Name = "keresettbetegid_lb";
+            this.keresettbetegid_lb.Size = new System.Drawing.Size(498, 13);
+            this.keresettbetegid_lb.TabIndex = 1;
             // 
             // BetegAdatlap
             // 
@@ -279,6 +416,12 @@ namespace MediSupp
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel3.PerformLayout();
             this.tableLayoutPanel4.ResumeLayout(false);
+            this.tableLayoutPanel5.ResumeLayout(false);
+            this.tableLayoutPanel5.PerformLayout();
+            this.tableLayoutPanel6.ResumeLayout(false);
+            this.tableLayoutPanel6.PerformLayout();
+            this.tableLayoutPanel7.ResumeLayout(false);
+            this.tableLayoutPanel7.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -302,6 +445,16 @@ namespace MediSupp
         private System.Windows.Forms.TextBox beteg_szul_ido_txb;
         private System.Windows.Forms.TextBox betegeletkor_txb;
         private System.Windows.Forms.TextBox betegtajszam_txb;
+        private System.Windows.Forms.Button betegadatmodositas_vegrehajt_bt;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
         private System.Windows.Forms.TextBox beteginfo_txb;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel6;
+        private System.Windows.Forms.Button betegadatkereses_bt;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox betegtajkeres_txb;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel7;
+        private System.Windows.Forms.Label szoveg_lb;
+        private System.Windows.Forms.Label keresettbetegid_lb;
     }
 }

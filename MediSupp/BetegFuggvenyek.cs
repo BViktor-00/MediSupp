@@ -13,7 +13,7 @@ namespace MediSupp
     {
 
         public static List<BetegAdatok> BetegAdatLista = new List<BetegAdatok>();
-
+       
         public static void BetegAdatfeltoltes(string nev, string szulhely, string datum,int eletkor, string tajszam, string beteginformacio)
         {
             try
@@ -45,7 +45,7 @@ namespace MediSupp
             }
         }
 
-        public static void BetegAdatMegjelenites()
+        public static void BetegAdatLekeres()
 
         {
             try
@@ -73,5 +73,40 @@ namespace MediSupp
 
 
         }
+
+               
+        public static void BetegAdatModositas(string nev, string szulhely, string datum, int eletkor, string tajszam, string beteginformacio,int betegid)
+        {
+           
+                
+                using (SqlConnection Csatlakozas = new SqlConnection(AdatbazisInfo.ServerInfo))
+                {
+                    string feltoltes = $"UPDATE beteg " +
+                    $"SET betegneve = @betegneve," +
+                    $"betegszulhely = @betegszulhely," +
+                    $"betegszulido = @betegszulido," +
+                    $"betegeletkor = @betegeletkor," +
+                    $"betegtajszam = @betegtajszam," +
+                    $"beteginfo = @beteginfo " +
+                    $"WHERE id = {betegid}";
+                    using (SqlCommand Parancs = new SqlCommand(feltoltes, Csatlakozas))
+                    {
+                        Parancs.Parameters.AddWithValue("@betegneve", nev);
+                        Parancs.Parameters.AddWithValue("@betegszulhely", szulhely);
+                        Parancs.Parameters.AddWithValue("@betegszulido", datum);
+                        Parancs.Parameters.AddWithValue("@betegeletkor", eletkor);
+                        Parancs.Parameters.AddWithValue("@betegtajszam", tajszam);
+                        Parancs.Parameters.AddWithValue("@beteginfo", beteginformacio);                       
+                        Csatlakozas.Open();
+                        Parancs.ExecuteNonQuery();
+
+                        MessageBox.Show("Az adatok módosítása sikeres!", "Információ", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    }
+
+                }
+                    
+        }
+        
     }
 }

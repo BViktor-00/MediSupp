@@ -14,12 +14,12 @@ namespace MediSupp
 {
     public partial class OrvosAdatlap : Form
     {
-        Orvosok OrvosTabla = new Orvosok();
+        Orvosok_panel OrvosTabla = new Orvosok_panel();
 
         public void DataGridFeltoltes()
         {
             OrvosTabla.DataListOrvosok.Rows.Clear();
-            OrvosFuggvenyek.OrvosAdatMegjelenites();
+            OrvosFuggvenyek.OrvosAdatAdatLekeres();
             for (int i = 0; i < OrvosFuggvenyek.OrvosLista.Count; i++)
             {
                OrvosTabla.DataListOrvosok.Rows.Add(OrvosFuggvenyek.OrvosLista[i].ID, OrvosFuggvenyek.OrvosLista[i].nev, OrvosFuggvenyek.OrvosLista[i].szakterulet, OrvosFuggvenyek.OrvosLista[i].emailcim, OrvosFuggvenyek.OrvosLista[i].betegek);

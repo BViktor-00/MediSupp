@@ -39,7 +39,7 @@ namespace MediSupp
             this.panel1 = new System.Windows.Forms.Panel();
             this.foOldal1 = new MediSupp.FoOldal();
             this.betegekPanel1 = new MediSupp.BetegekPanel();
-            this.orvosok1 = new MediSupp.Orvosok();
+            this.orvosok1 = new MediSupp.Orvosok_panel();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -197,7 +197,7 @@ namespace MediSupp
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Panel panel1;
-        private Orvosok orvosok1;
+        private Orvosok_panel orvosok1;
         private BetegekPanel betegekPanel1;
         private FoOldal foOldal1;
     }

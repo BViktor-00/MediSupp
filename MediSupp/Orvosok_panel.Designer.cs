@@ -1,7 +1,7 @@
 ﻿
 namespace MediSupp
 {
-    partial class Orvosok
+    partial class Orvosok_panel
     {
         /// <summary> 
         /// Required designer variable.
@@ -31,9 +31,10 @@ namespace MediSupp
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.orvosadatfrissites_bt = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.orvosadatmodositas_bt = new System.Windows.Forms.Button();
+            this.orvostorles_bt = new System.Windows.Forms.Button();
             this.DataListOrvosok = new System.Windows.Forms.DataGridView();
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.orvosneve = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -63,13 +64,15 @@ namespace MediSupp
             // 
             // tableLayoutPanel2
             // 
-            this.tableLayoutPanel2.ColumnCount = 3;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel2.ColumnCount = 4;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel2.Controls.Add(this.orvosadatfrissites_bt, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.button1, 0, 0);
-            this.tableLayoutPanel2.Controls.Add(this.button2, 1, 0);
-            this.tableLayoutPanel2.Controls.Add(this.button3, 2, 0);
+            this.tableLayoutPanel2.Controls.Add(this.orvosadatmodositas_bt, 2, 0);
+            this.tableLayoutPanel2.Controls.Add(this.orvostorles_bt, 3, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 643);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
@@ -78,36 +81,50 @@ namespace MediSupp
             this.tableLayoutPanel2.Size = new System.Drawing.Size(756, 28);
             this.tableLayoutPanel2.TabIndex = 0;
             // 
+            // orvosadatfrissites_bt
+            // 
+            this.orvosadatfrissites_bt.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.orvosadatfrissites_bt.Location = new System.Drawing.Point(192, 3);
+            this.orvosadatfrissites_bt.Name = "orvosadatfrissites_bt";
+            this.orvosadatfrissites_bt.Size = new System.Drawing.Size(183, 22);
+            this.orvosadatfrissites_bt.TabIndex = 3;
+            this.orvosadatfrissites_bt.Text = "Adatok frissítése";
+            this.orvosadatfrissites_bt.UseVisualStyleBackColor = true;
+            this.orvosadatfrissites_bt.Click += new System.EventHandler(this.orvosadatfrissites_bt_Click);
+            // 
             // button1
             // 
             this.button1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.button1.Location = new System.Drawing.Point(3, 3);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(246, 22);
+            this.button1.Size = new System.Drawing.Size(183, 22);
             this.button1.TabIndex = 0;
             this.button1.Text = "Új Orvos";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button2
+            // orvosadatmodositas_bt
             // 
-            this.button2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.button2.Location = new System.Drawing.Point(255, 3);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(246, 22);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Módosítás";
-            this.button2.UseVisualStyleBackColor = true;
+            this.orvosadatmodositas_bt.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.orvosadatmodositas_bt.Location = new System.Drawing.Point(381, 3);
+            this.orvosadatmodositas_bt.Name = "orvosadatmodositas_bt";
+            this.orvosadatmodositas_bt.Size = new System.Drawing.Size(183, 22);
+            this.orvosadatmodositas_bt.TabIndex = 1;
+            this.orvosadatmodositas_bt.Text = "Módosítás";
+            this.orvosadatmodositas_bt.UseVisualStyleBackColor = true;
+            this.orvosadatmodositas_bt.Click += new System.EventHandler(this.orvosadatmodositas_bt_Click);
             // 
-            // button3
+            // orvostorles_bt
             // 
-            this.button3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.button3.Location = new System.Drawing.Point(507, 3);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(246, 22);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "Orvos törlése";
-            this.button3.UseVisualStyleBackColor = true;
+            this.orvostorles_bt.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.orvostorles_bt.Location = new System.Drawing.Point(570, 3);
+            this.orvostorles_bt.Name = "orvostorles_bt";
+            this.orvostorles_bt.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.orvostorles_bt.Size = new System.Drawing.Size(183, 22);
+            this.orvostorles_bt.TabIndex = 2;
+            this.orvostorles_bt.Text = "Orvos törlése";
+            this.orvostorles_bt.UseVisualStyleBackColor = true;
+            this.orvostorles_bt.Click += new System.EventHandler(this.orvostorles_bt_Click);
             // 
             // DataListOrvosok
             // 
@@ -160,12 +177,12 @@ namespace MediSupp
             this.betegek.Name = "betegek";
             this.betegek.ReadOnly = true;
             // 
-            // Orvosok
+            // Orvosok_panel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.tableLayoutPanel1);
-            this.Name = "Orvosok";
+            this.Name = "Orvosok_panel";
             this.Size = new System.Drawing.Size(762, 674);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
@@ -179,13 +196,14 @@ namespace MediSupp
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button orvosadatmodositas_bt;
+        private System.Windows.Forms.Button orvostorles_bt;
         private System.Windows.Forms.DataGridViewTextBoxColumn id;
         private System.Windows.Forms.DataGridViewTextBoxColumn orvosneve;
         private System.Windows.Forms.DataGridViewTextBoxColumn szakterulet;
         private System.Windows.Forms.DataGridViewTextBoxColumn emailcim;
         private System.Windows.Forms.DataGridViewTextBoxColumn betegek;
         public System.Windows.Forms.DataGridView DataListOrvosok;
+        private System.Windows.Forms.Button orvosadatfrissites_bt;
     }
 }
