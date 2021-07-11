@@ -40,6 +40,7 @@ namespace MediSupp
             this.orvosneve = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.szakterulet = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.emailcim = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pecsetszam = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.betegek = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -134,6 +135,7 @@ namespace MediSupp
             this.orvosneve,
             this.szakterulet,
             this.emailcim,
+            this.pecsetszam,
             this.betegek});
             this.DataListOrvosok.Dock = System.Windows.Forms.DockStyle.Fill;
             this.DataListOrvosok.Location = new System.Drawing.Point(3, 104);
@@ -170,6 +172,13 @@ namespace MediSupp
             this.emailcim.Name = "emailcim";
             this.emailcim.ReadOnly = true;
             // 
+            // pecsetszam
+            // 
+            this.pecsetszam.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.pecsetszam.HeaderText = "Orvosi pecsétszám";
+            this.pecsetszam.Name = "pecsetszam";
+            this.pecsetszam.ReadOnly = true;
+            // 
             // betegek
             // 
             this.betegek.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
@@ -198,12 +207,13 @@ namespace MediSupp
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button orvosadatmodositas_bt;
         private System.Windows.Forms.Button orvostorles_bt;
+        public System.Windows.Forms.DataGridView DataListOrvosok;
+        private System.Windows.Forms.Button orvosadatfrissites_bt;
         private System.Windows.Forms.DataGridViewTextBoxColumn id;
         private System.Windows.Forms.DataGridViewTextBoxColumn orvosneve;
         private System.Windows.Forms.DataGridViewTextBoxColumn szakterulet;
         private System.Windows.Forms.DataGridViewTextBoxColumn emailcim;
+        private System.Windows.Forms.DataGridViewTextBoxColumn pecsetszam;
         private System.Windows.Forms.DataGridViewTextBoxColumn betegek;
-        public System.Windows.Forms.DataGridView DataListOrvosok;
-        private System.Windows.Forms.Button orvosadatfrissites_bt;
     }
 }

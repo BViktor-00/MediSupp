@@ -48,10 +48,14 @@ namespace MediSupp
             this.label5 = new System.Windows.Forms.Label();
             this.keresettorvos_txb = new System.Windows.Forms.TextBox();
             this.orvoskeresvegrehajt_bt = new System.Windows.Forms.Button();
+            this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
+            this.label6 = new System.Windows.Forms.Label();
+            this.orvosid_lb = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
+            this.tableLayoutPanel5.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -61,6 +65,7 @@ namespace MediSupp
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel4, 0, 3);
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel3, 0, 2);
+            this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel5, 0, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -92,8 +97,8 @@ namespace MediSupp
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 21F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 19F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 23F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 17F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(718, 116);
             this.tableLayoutPanel2.TabIndex = 0;
             // 
@@ -102,7 +107,7 @@ namespace MediSupp
             this.label4.AutoSize = true;
             this.label4.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label4.Location = new System.Drawing.Point(3, 95);
+            this.label4.Location = new System.Drawing.Point(3, 97);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(127, 16);
             this.label4.TabIndex = 6;
@@ -211,6 +216,7 @@ namespace MediSupp
             this.orvosadatmodositasvegrahajt_bt.Text = "Adatok módosítása";
             this.orvosadatmodositasvegrahajt_bt.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.orvosadatmodositasvegrahajt_bt.UseVisualStyleBackColor = true;
+            this.orvosadatmodositasvegrahajt_bt.Click += new System.EventHandler(this.orvosadatmodositasvegrahajt_bt_Click);
             // 
             // OrvosokFeltoltes_bt
             // 
@@ -228,7 +234,7 @@ namespace MediSupp
             this.tableLayoutPanel3.ColumnCount = 3;
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 32.64605F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 67.35395F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 137F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 139F));
             this.tableLayoutPanel3.Controls.Add(this.label1, 0, 0);
             this.tableLayoutPanel3.Controls.Add(this.label5, 0, 1);
             this.tableLayoutPanel3.Controls.Add(this.keresettorvos_txb, 1, 1);
@@ -269,18 +275,54 @@ namespace MediSupp
             this.keresettorvos_txb.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.keresettorvos_txb.Location = new System.Drawing.Point(192, 29);
             this.keresettorvos_txb.Name = "keresettorvos_txb";
-            this.keresettorvos_txb.Size = new System.Drawing.Size(385, 20);
+            this.keresettorvos_txb.Size = new System.Drawing.Size(383, 20);
             this.keresettorvos_txb.TabIndex = 2;
             // 
             // orvoskeresvegrehajt_bt
             // 
             this.orvoskeresvegrehajt_bt.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.orvoskeresvegrehajt_bt.Location = new System.Drawing.Point(583, 29);
+            this.orvoskeresvegrehajt_bt.Location = new System.Drawing.Point(581, 29);
             this.orvoskeresvegrehajt_bt.Name = "orvoskeresvegrehajt_bt";
-            this.orvoskeresvegrehajt_bt.Size = new System.Drawing.Size(132, 20);
+            this.orvoskeresvegrehajt_bt.Size = new System.Drawing.Size(134, 20);
             this.orvoskeresvegrehajt_bt.TabIndex = 3;
             this.orvoskeresvegrehajt_bt.Text = "Keres";
             this.orvoskeresvegrehajt_bt.UseVisualStyleBackColor = true;
+            this.orvoskeresvegrehajt_bt.Click += new System.EventHandler(this.orvoskeresvegrehajt_bt_Click);
+            // 
+            // tableLayoutPanel5
+            // 
+            this.tableLayoutPanel5.ColumnCount = 2;
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 23.11978F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 76.88023F));
+            this.tableLayoutPanel5.Controls.Add(this.label6, 0, 0);
+            this.tableLayoutPanel5.Controls.Add(this.orvosid_lb, 1, 0);
+            this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel5.Location = new System.Drawing.Point(3, 3);
+            this.tableLayoutPanel5.Name = "tableLayoutPanel5";
+            this.tableLayoutPanel5.RowCount = 1;
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(718, 20);
+            this.tableLayoutPanel5.TabIndex = 4;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.label6.Location = new System.Drawing.Point(3, 7);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(160, 13);
+            this.label6.TabIndex = 0;
+            this.label6.Text = "Keresett orvos azonosítószáma:";
+            // 
+            // orvosid_lb
+            // 
+            this.orvosid_lb.AutoSize = true;
+            this.orvosid_lb.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.orvosid_lb.Location = new System.Drawing.Point(169, 7);
+            this.orvosid_lb.Name = "orvosid_lb";
+            this.orvosid_lb.Size = new System.Drawing.Size(546, 13);
+            this.orvosid_lb.TabIndex = 1;
+            this.orvosid_lb.Click += new System.EventHandler(this.orvosid_lb_Click);
             // 
             // OrvosAdatlap
             // 
@@ -296,6 +338,8 @@ namespace MediSupp
             this.tableLayoutPanel4.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel3.PerformLayout();
+            this.tableLayoutPanel5.ResumeLayout(false);
+            this.tableLayoutPanel5.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -321,5 +365,8 @@ namespace MediSupp
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox keresettorvos_txb;
         private System.Windows.Forms.Button orvoskeresvegrehajt_bt;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label orvosid_lb;
     }
 }

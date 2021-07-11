@@ -13,13 +13,15 @@ namespace MediSupp
         public string szakterulet;
         public string emailcim;
         public string betegek;
+        public string orvospecset;
 
-        public OrvosAdatok(int ID, string nev, string szakterulet, string emailcim, string betegek)
+        public OrvosAdatok(int ID, string nev, string szakterulet, string emailcim, string orvospecset, string betegek)
         {
             this.ID = ID;
             this.nev = nev;
             this.szakterulet = szakterulet;
             this.emailcim = emailcim;
+            this.orvospecset = orvospecset;
             this.betegek = betegek;
         }
 
