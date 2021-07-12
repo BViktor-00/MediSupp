@@ -73,15 +73,14 @@ namespace MediSupp
 
 
         }
-
-               
+                       
         public static void BetegAdatModositas(string nev, string szulhely, string datum, int eletkor, string tajszam, string beteginformacio,int betegid)
         {
            
                 
                 using (SqlConnection Csatlakozas = new SqlConnection(AdatbazisInfo.ServerInfo))
                 {
-                    string feltoltes = $"UPDATE beteg " +
+                    string modositas = $"UPDATE beteg " +
                     $"SET betegneve = @betegneve," +
                     $"betegszulhely = @betegszulhely," +
                     $"betegszulido = @betegszulido," +
@@ -89,7 +88,7 @@ namespace MediSupp
                     $"betegtajszam = @betegtajszam," +
                     $"beteginfo = @beteginfo " +
                     $"WHERE id = {betegid}";
-                    using (SqlCommand Parancs = new SqlCommand(feltoltes, Csatlakozas))
+                    using (SqlCommand Parancs = new SqlCommand(modositas, Csatlakozas))
                     {
                         Parancs.Parameters.AddWithValue("@betegneve", nev);
                         Parancs.Parameters.AddWithValue("@betegszulhely", szulhely);

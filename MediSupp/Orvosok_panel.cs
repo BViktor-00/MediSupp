@@ -23,7 +23,7 @@ namespace MediSupp
             OrvosFuggvenyek.OrvosAdatAdatLekeres();
             for (int i = 0; i < OrvosFuggvenyek.OrvosLista.Count; i++)
             {
-                DataListOrvosok.Rows.Add(OrvosFuggvenyek.OrvosLista[i].ID, OrvosFuggvenyek.OrvosLista[i].nev, OrvosFuggvenyek.OrvosLista[i].szakterulet, OrvosFuggvenyek.OrvosLista[i].emailcim, OrvosFuggvenyek.OrvosLista[i].betegek);
+                DataListOrvosok.Rows.Add(OrvosFuggvenyek.OrvosLista[i].ID, OrvosFuggvenyek.OrvosLista[i].nev, OrvosFuggvenyek.OrvosLista[i].szakterulet, OrvosFuggvenyek.OrvosLista[i].emailcim,OrvosFuggvenyek.OrvosLista[i].orvospecset, OrvosFuggvenyek.OrvosLista[i].betegek);
             }
         }
 

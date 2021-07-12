@@ -17,18 +17,19 @@ namespace MediSupp
 
         public static List<OrvosAdatok> OrvosLista = new List<OrvosAdatok>();
 
-        public static void OrvosAdatfeltoltes(string nev, string szakterulet, string emailcim)
+        public static void OrvosAdatfeltoltes(string nev, string szakterulet, string emailcim,string pecsetszam)
         {
             try
             {
                 using (SqlConnection Csatlakozas = new SqlConnection(AdatbazisInfo.ServerInfo))
                 {
-                    string feltoltes = "INSERT INTO orvos VALUES (@orvosneve,@szakterulet,@emailcim,@betegek)";
+                    string feltoltes = "INSERT INTO orvos VALUES (@orvosneve,@szakterulet,@emailcim,@pecsetszam,@betegek)";
                     using (SqlCommand Parancs = new SqlCommand(feltoltes, Csatlakozas))
                     {
                         Parancs.Parameters.AddWithValue("@orvosneve", nev);
                         Parancs.Parameters.AddWithValue("@szakterulet", szakterulet);
                         Parancs.Parameters.AddWithValue("@emailcim", emailcim);
+                        Parancs.Parameters.AddWithValue("@pecsetszam", pecsetszam);
                         Parancs.Parameters.AddWithValue("@betegek", "nincs");
                         Csatlakozas.Open();
                         Parancs.ExecuteNonQuery();
@@ -60,7 +61,7 @@ namespace MediSupp
                         SqlDataReader LekerdezesParancs = Parancs.ExecuteReader();
                         while (LekerdezesParancs.Read())
                         {
-                           OrvosLista.Add(new OrvosAdatok(Convert.ToInt32(LekerdezesParancs["Id"]), Convert.ToString(LekerdezesParancs["orvosneve"]), Convert.ToString(LekerdezesParancs["szakterulet"]), Convert.ToString(LekerdezesParancs["emailcim"]), Convert.ToString(LekerdezesParancs["betegek"])));
+                           OrvosLista.Add(new OrvosAdatok(Convert.ToInt32(LekerdezesParancs["Id"]), Convert.ToString(LekerdezesParancs["orvosneve"]), Convert.ToString(LekerdezesParancs["szakterulet"]), Convert.ToString(LekerdezesParancs["emailcim"]),Convert.ToString(LekerdezesParancs["pecsetszam"]), Convert.ToString(LekerdezesParancs["betegek"])));
                         }
                     }
 
@@ -75,6 +76,34 @@ namespace MediSupp
 
         }
 
-        
+        public static void OrvosAdatModositas(string nev, string szakterulet, string emailcim, string pecsetszam,int orvosid)
+        {
+
+
+            using (SqlConnection Csatlakozas = new SqlConnection(AdatbazisInfo.ServerInfo))
+            {
+                string modositas = $"UPDATE orvos " +
+                $"SET orvosneve = @orvosneve," +
+                $"szakterulet = @szakterulet," +
+                $"emailcim  = @emailcim," +
+                $"pecsetszam = @pecsetszam " +         
+                $"WHERE id = {orvosid}";
+                using (SqlCommand Parancs = new SqlCommand(modositas, Csatlakozas))
+                {
+                    Parancs.Parameters.AddWithValue("@orvosneve", nev);
+                    Parancs.Parameters.AddWithValue("@szakterulet", szakterulet);
+                    Parancs.Parameters.AddWithValue("@emailcim", emailcim);
+                    Parancs.Parameters.AddWithValue("@pecsetszam", pecsetszam);                                                   
+                    Csatlakozas.Open();
+                    Parancs.ExecuteNonQuery();
+
+                    MessageBox.Show("Az adatok módosítása sikeres!", "Információ", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                }
+
+            }
+
+        }
+
     }
 }
