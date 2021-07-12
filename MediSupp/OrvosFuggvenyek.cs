@@ -86,7 +86,7 @@ namespace MediSupp
                 $"SET orvosneve = @orvosneve," +
                 $"szakterulet = @szakterulet," +
                 $"emailcim  = @emailcim," +
-                $"pecsetszam = @pecsetszam," +         
+                $"pecsetszam = @pecsetszam " +         
                 $"WHERE id = {orvosid}";
                 using (SqlCommand Parancs = new SqlCommand(modositas, Csatlakozas))
                 {
