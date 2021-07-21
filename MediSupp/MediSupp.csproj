@@ -61,74 +61,74 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AdatbazisInfo.cs" />
-    <Compile Include="BetegAdatlap.cs">
+    <Compile Include="DatabaseInfo\AdatbazisInfo.cs" />
+    <Compile Include="Windows\BetegAdatlapWindow.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="BetegAdatlap.Designer.cs">
-      <DependentUpon>BetegAdatlap.cs</DependentUpon>
+    <Compile Include="Windows\BetegAdatlapWindow.Designer.cs">
+      <DependentUpon>BetegAdatlapWindow.cs</DependentUpon>
     </Compile>
-    <Compile Include="BetegAdatok.cs" />
-    <Compile Include="BetegekPanel.cs">
+    <Compile Include="PatientClasses\BetegAdatok.cs" />
+    <Compile Include="Panels\BetegekPanel.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="BetegekPanel.Designer.cs">
+    <Compile Include="Panels\BetegekPanel.Designer.cs">
       <DependentUpon>BetegekPanel.cs</DependentUpon>
     </Compile>
-    <Compile Include="BetegFuggvenyek.cs" />
-    <Compile Include="FoOldal.cs">
+    <Compile Include="PatientClasses\BetegFuggvenyek.cs" />
+    <Compile Include="Panels\FoOldal.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="FoOldal.Designer.cs">
+    <Compile Include="Panels\FoOldal.Designer.cs">
       <DependentUpon>FoOldal.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form1.cs">
+    <Compile Include="Windows\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
+    <Compile Include="Windows\Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="MainWindow.cs">
+    <Compile Include="Windows\MainWindow.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MainWindow.Designer.cs">
+    <Compile Include="Windows\MainWindow.Designer.cs">
       <DependentUpon>MainWindow.cs</DependentUpon>
     </Compile>
-    <Compile Include="OrvosAdatlap.cs">
+    <Compile Include="Windows\OrvosAdatlapWindow.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="OrvosAdatlap.Designer.cs">
-      <DependentUpon>OrvosAdatlap.cs</DependentUpon>
+    <Compile Include="Windows\OrvosAdatlapWindow.Designer.cs">
+      <DependentUpon>OrvosAdatlapWindow.cs</DependentUpon>
     </Compile>
-    <Compile Include="OrvosAdatok.cs" />
-    <Compile Include="OrvosFuggvenyek.cs" />
-    <Compile Include="Orvosok_panel.cs">
+    <Compile Include="DoctorClasses\OrvosAdatok.cs" />
+    <Compile Include="DoctorClasses\OrvosFuggvenyek.cs" />
+    <Compile Include="Panels\Orvosok_panel.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Orvosok_panel.Designer.cs">
+    <Compile Include="Panels\Orvosok_panel.Designer.cs">
       <DependentUpon>Orvosok_panel.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="BetegAdatlap.resx">
-      <DependentUpon>BetegAdatlap.cs</DependentUpon>
+    <EmbeddedResource Include="Windows\BetegAdatlapWindow.resx">
+      <DependentUpon>BetegAdatlapWindow.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="BetegekPanel.resx">
+    <EmbeddedResource Include="Panels\BetegekPanel.resx">
       <DependentUpon>BetegekPanel.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FoOldal.resx">
+    <EmbeddedResource Include="Panels\FoOldal.resx">
       <DependentUpon>FoOldal.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
+    <EmbeddedResource Include="Windows\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MainWindow.resx">
+    <EmbeddedResource Include="Windows\MainWindow.resx">
       <DependentUpon>MainWindow.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="OrvosAdatlap.resx">
-      <DependentUpon>OrvosAdatlap.cs</DependentUpon>
+    <EmbeddedResource Include="Windows\OrvosAdatlapWindow.resx">
+      <DependentUpon>OrvosAdatlapWindow.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Orvosok_panel.resx">
+    <EmbeddedResource Include="Panels\Orvosok_panel.resx">
       <DependentUpon>Orvosok_panel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -174,5 +174,6 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

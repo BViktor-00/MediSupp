@@ -11,12 +11,12 @@ using System.Data.SqlClient;
 
 namespace MediSupp
 {
-    public partial class BetegAdatlap : Form
+    public partial class BetegAdatlapWindow : Form
 
     {
         private void BetegAdatkereses()
         {
-            BetegFuggvenyek.BetegAdatLekeres();
+            /*BetegFuggvenyek.BetegAdatLekeres();
             bool letezik = false;
             for(int i =0;i < BetegFuggvenyek.BetegAdatLista.Count;i++)
             {
@@ -36,7 +36,7 @@ namespace MediSupp
             if(letezik == false)
             {
                 MessageBox.Show("A Keresett beteg nem szerepel a listában!");
-            }
+            }*/
         }
 
         private void Clear()
@@ -47,7 +47,7 @@ namespace MediSupp
             betegeletkor_txb.Clear();
             betegtajszam_txb.Clear();
             beteginfo_txb.Clear();
-            betegtajkeres_txb.Clear();
+           // betegtajkeres_txb.Clear();
             
 
         }
@@ -56,7 +56,7 @@ namespace MediSupp
 
         
 
-            public BetegAdatlap()
+            public BetegAdatlapWindow()
         {
             InitializeComponent();
         }
@@ -66,6 +66,7 @@ namespace MediSupp
             BetegFuggvenyek.BetegAdatfeltoltes(betegneve_txb.Text, beteg_szul_hely_txb.Text, beteg_szul_ido_txb.Text, Convert.ToInt32(betegeletkor_txb.Text), betegtajszam_txb.Text, beteginfo_txb.Text);
             Clear();
             keresettbetegid_lb.Text = "";
+            this.Close();
         }
 
         private void betegadatlapbezar_bt_Click(object sender, EventArgs e)
@@ -77,7 +78,7 @@ namespace MediSupp
         {
 
             BetegAdatkereses();
-            betegtajkeres_txb.Clear();
+            //betegtajkeres_txb.Clear();
             
         }
 

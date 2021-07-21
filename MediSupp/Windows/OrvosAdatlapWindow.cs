@@ -12,7 +12,7 @@ using System.IO;
 
 namespace MediSupp
 {
-    public partial class OrvosAdatlap : Form
+    public partial class OrvosAdatlapWindow : Form
     {
         Orvosok_panel OrvosTabla = new Orvosok_panel();
 
@@ -31,11 +31,13 @@ namespace MediSupp
             Orvosnev_txb.Clear();
             szakterulet_txb.Clear();
             emailcim_txb.Clear();
+            orvosipecsetszam_txb.Clear();
+           
         }
 
 
 
-        public OrvosAdatlap()
+        public OrvosAdatlapWindow()
         {
             InitializeComponent();
         }
@@ -45,7 +47,9 @@ namespace MediSupp
         {
             OrvosFuggvenyek.OrvosAdatfeltoltes(Orvosnev_txb.Text, szakterulet_txb.Text, emailcim_txb.Text,orvosipecsetszam_txb.Text);
             Clear();
-            DataGridFeltoltes();                       
+            this.Close();
+            Orvosok_panel OrvosPanel = new Orvosok_panel();
+            OrvosPanel.DataGridFeltoltes();                       
         }
 
         private void orvosokkilepes_bt_Click(object sender, EventArgs e)
@@ -57,31 +61,10 @@ namespace MediSupp
         {
           
             OrvosFuggvenyek.OrvosAdatModositas(Orvosnev_txb.Text, szakterulet_txb.Text, emailcim_txb.Text, orvosipecsetszam_txb.Text, Convert.ToInt32(orvosid_lb.Text));
-            
+            this.Close();
         }
 
-        private void orvoskeresvegrehajt_bt_Click(object sender, EventArgs e)
-        {
-            bool letezik = false;
-            
-            for(int i =0; i < OrvosFuggvenyek.OrvosLista.Count;i++)
-            {
-                if(OrvosFuggvenyek.OrvosLista[i].orvospecset == keresettorvos_txb.Text)
-                {
-                    orvosid_lb.Text = Convert.ToString(OrvosFuggvenyek.OrvosLista[i].ID);
-                    Orvosnev_txb.Text = OrvosFuggvenyek.OrvosLista[i].nev;
-                    szakterulet_txb.Text = OrvosFuggvenyek.OrvosLista[i].szakterulet;
-                    emailcim_txb.Text = OrvosFuggvenyek.OrvosLista[i].emailcim;
-                    orvosipecsetszam_txb.Text = OrvosFuggvenyek.OrvosLista[i].orvospecset;
-                    letezik = true;
-
-                }
-
-                if (letezik == false)
-                    MessageBox.Show("A Keresett orvos nem található!");
-            }
-        }
-
+       
         private void orvosid_lb_Click(object sender, EventArgs e)
         {
 

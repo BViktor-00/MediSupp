@@ -63,19 +63,8 @@ namespace MediSupp
             InitializeComponent();
             DataGridFeltoltes();
         }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            OrvosAdatlap Orvosok = new OrvosAdatlap();
-            Orvosok.Show();
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-            
-            DataGridFeltoltes();
-
-        }
+             
+               
 
         private void orvosadatfrissites_bt_Click(object sender, EventArgs e)
         {
@@ -83,15 +72,66 @@ namespace MediSupp
             DataGridFeltoltes();
         }
 
-        private void orvostorles_bt_Click(object sender, EventArgs e)
+               
+
+        private void orvoskeresvegrehajt_bt_Click(object sender, EventArgs e)
+        {
+            bool letezik = false;
+
+            for (int i = 0; i < OrvosFuggvenyek.OrvosLista.Count; i++)
+            {
+                if (OrvosFuggvenyek.OrvosLista[i].orvospecset == keresettorvos_txb.Text)
+                {
+                    DataListOrvosok.Rows.Clear();
+                    OrvosFuggvenyek.OrvosLista.Clear();
+                    OrvosFuggvenyek.OrvosAdatAdatLekeres();
+                    
+                    DataListOrvosok.Rows.Add(OrvosFuggvenyek.OrvosLista[i].ID, OrvosFuggvenyek.OrvosLista[i].nev, OrvosFuggvenyek.OrvosLista[i].szakterulet, OrvosFuggvenyek.OrvosLista[i].emailcim, OrvosFuggvenyek.OrvosLista[i].orvospecset, OrvosFuggvenyek.OrvosLista[i].betegek);
+                    
+                    letezik = true;
+
+                }
+                                
+            }
+            if (letezik == false)
+                MessageBox.Show("A Keresett orvos nem található!");
+
+            keresettorvos_txb.Clear();
+        }
+
+        private void AdatokFrissitese_bt_Click(object sender, EventArgs e)
+        {
+            DataGridFeltoltes();
+        }
+
+        private void UjOrvos_bt_Click(object sender, EventArgs e)
+        {
+            OrvosAdatlapWindow Orvosok = new OrvosAdatlapWindow();
+            Orvosok.Show();
+        }
+
+        private void OrvosTorlese_bt_Click(object sender, EventArgs e)
         {
             OrvosTorles();
         }
 
-        private void orvosadatmodositas_bt_Click(object sender, EventArgs e)
+        private void OrvosAdatModositas_bt_Click_1(object sender, EventArgs e)
         {
-            OrvosAdatlap Orvosok = new OrvosAdatlap();
+             string orvosPecset = Convert.ToString(DataListOrvosok.SelectedCells[4].Value);
+            OrvosAdatlapWindow Orvosok = new OrvosAdatlapWindow();
             Orvosok.Show();
+             for(int i =0; i <OrvosFuggvenyek.OrvosLista.Count;i++ )
+             {
+                 if(OrvosFuggvenyek.OrvosLista[i].orvospecset == orvosPecset)
+                 {
+                    Orvosok.Orvosnev_txb.Text = OrvosFuggvenyek.OrvosLista[i].nev;
+                    Orvosok.szakterulet_txb.Text = OrvosFuggvenyek.OrvosLista[i].szakterulet;
+                    Orvosok.emailcim_txb.Text = OrvosFuggvenyek.OrvosLista[i].emailcim;
+                    Orvosok.orvosipecsetszam_txb.Text = OrvosFuggvenyek.OrvosLista[i].orvospecset;
+                    Orvosok.orvosid_lb.Text = Convert.ToString(OrvosFuggvenyek.OrvosLista[i].ID);
+                 }
+             }
+
         }
     }
 }
