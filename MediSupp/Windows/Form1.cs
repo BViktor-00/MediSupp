@@ -28,6 +28,9 @@ namespace MediSupp
             MainWindow Form2 = new MainWindow();
             Form2.Show();
 
+            Form1 Belepes = new Form1();
+            Belepes.Hide();
+
             
         }
     }

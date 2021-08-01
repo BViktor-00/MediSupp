@@ -33,10 +33,11 @@ namespace MediSupp
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.orvosok_szerkesztese_bt = new System.Windows.Forms.Button();
             this.betegek_szerkesztese_bt = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.AktivBetegekAdatkezelese_bt = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.aktivBetegekPanel1 = new MediSupp.Panels.AktivBetegekPanel();
             this.foOldal1 = new MediSupp.FoOldal();
             this.betegekPanel1 = new MediSupp.BetegekPanel();
             this.orvosok1 = new MediSupp.Orvosok_panel();
@@ -67,7 +68,7 @@ namespace MediSupp
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel2.Controls.Add(this.orvosok_szerkesztese_bt, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.betegek_szerkesztese_bt, 0, 1);
-            this.tableLayoutPanel2.Controls.Add(this.button3, 0, 2);
+            this.tableLayoutPanel2.Controls.Add(this.AktivBetegekAdatkezelese_bt, 0, 2);
             this.tableLayoutPanel2.Controls.Add(this.button4, 0, 3);
             this.tableLayoutPanel2.Controls.Add(this.button5, 0, 5);
             this.tableLayoutPanel2.Cursor = System.Windows.Forms.Cursors.Arrow;
@@ -106,15 +107,16 @@ namespace MediSupp
             this.betegek_szerkesztese_bt.UseVisualStyleBackColor = true;
             this.betegek_szerkesztese_bt.Click += new System.EventHandler(this.betegek_szerkesztese_bt_Click);
             // 
-            // button3
+            // AktivBetegekAdatkezelese_bt
             // 
-            this.button3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button3.Location = new System.Drawing.Point(3, 63);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(113, 24);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "button3";
-            this.button3.UseVisualStyleBackColor = true;
+            this.AktivBetegekAdatkezelese_bt.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.AktivBetegekAdatkezelese_bt.Location = new System.Drawing.Point(3, 63);
+            this.AktivBetegekAdatkezelese_bt.Name = "AktivBetegekAdatkezelese_bt";
+            this.AktivBetegekAdatkezelese_bt.Size = new System.Drawing.Size(113, 24);
+            this.AktivBetegekAdatkezelese_bt.TabIndex = 2;
+            this.AktivBetegekAdatkezelese_bt.Text = "Aktív betegek";
+            this.AktivBetegekAdatkezelese_bt.UseVisualStyleBackColor = true;
+            this.AktivBetegekAdatkezelese_bt.Click += new System.EventHandler(this.AktivBetegekAdatkezelese_bt_Click);
             // 
             // button4
             // 
@@ -139,6 +141,7 @@ namespace MediSupp
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.aktivBetegekPanel1);
             this.panel1.Controls.Add(this.foOldal1);
             this.panel1.Controls.Add(this.betegekPanel1);
             this.panel1.Controls.Add(this.orvosok1);
@@ -147,6 +150,14 @@ namespace MediSupp
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(776, 665);
             this.panel1.TabIndex = 1;
+            // 
+            // aktivBetegekPanel1
+            // 
+            this.aktivBetegekPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.aktivBetegekPanel1.Location = new System.Drawing.Point(0, 0);
+            this.aktivBetegekPanel1.Name = "aktivBetegekPanel1";
+            this.aktivBetegekPanel1.Size = new System.Drawing.Size(776, 665);
+            this.aktivBetegekPanel1.TabIndex = 3;
             // 
             // foOldal1
             // 
@@ -193,12 +204,13 @@ namespace MediSupp
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.Button orvosok_szerkesztese_bt;
         private System.Windows.Forms.Button betegek_szerkesztese_bt;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button AktivBetegekAdatkezelese_bt;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Panel panel1;
         private Orvosok_panel orvosok1;
         private BetegekPanel betegekPanel1;
         private FoOldal foOldal1;
+        private Panels.AktivBetegekPanel aktivBetegekPanel1;
     }
 }

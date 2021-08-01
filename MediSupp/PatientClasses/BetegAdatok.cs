@@ -15,8 +15,9 @@ namespace MediSupp
         public int betegeletkor;
         public string betegtajszam;
         public string beteginfo;
+        public string betegkorelozmeny;
 
-        public BetegAdatok(int id,string betegneve,string betegszulhely,string betegszulido,int betegeletkor,string betegtajszam,string beteginfo)
+        public BetegAdatok(int id,string betegneve,string betegszulhely,string betegszulido,int betegeletkor,string betegtajszam,string beteginfo,string betegkorelozmeny)
         {
             this.id = id;
             this.betegneve = betegneve;
@@ -25,6 +26,7 @@ namespace MediSupp
             this.betegeletkor = betegeletkor;
             this.betegtajszam = betegtajszam;
             this.beteginfo = beteginfo;
+            this.betegkorelozmeny = betegkorelozmeny;
         }
 
     }

@@ -20,6 +20,7 @@ namespace MediSupp
             foOldal1.Show();
             betegekPanel1.Hide();
             orvosok1.Hide();
+            aktivBetegekPanel1.Hide();
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -32,7 +33,7 @@ namespace MediSupp
             foOldal1.Hide();
             orvosok1.Show();
             betegekPanel1.Hide();
-                       
+            aktivBetegekPanel1.Hide();
 
         }
 
@@ -41,6 +42,15 @@ namespace MediSupp
             foOldal1.Hide();
             orvosok1.Hide();
             betegekPanel1.Show();
+            aktivBetegekPanel1.Hide();
+        }
+
+        private void AktivBetegekAdatkezelese_bt_Click(object sender, EventArgs e)
+        {
+            aktivBetegekPanel1.Show();
+            foOldal1.Hide();
+            orvosok1.Hide();
+            betegekPanel1.Hide();
         }
     }
 }

@@ -61,7 +61,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Windows\AktivBetegAdatFelvetelWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\AktivBetegAdatFelvetelWindow.Designer.cs">
+      <DependentUpon>AktivBetegAdatFelvetelWindow.cs</DependentUpon>
+    </Compile>
     <Compile Include="DatabaseInfo\AdatbazisInfo.cs" />
+    <Compile Include="Panels\AktivBetegekPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Panels\AktivBetegekPanel.Designer.cs">
+      <DependentUpon>AktivBetegekPanel.cs</DependentUpon>
+    </Compile>
     <Compile Include="Windows\BetegAdatlapWindow.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -110,6 +122,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Windows\AktivBetegAdatFelvetelWindow.resx">
+      <DependentUpon>AktivBetegAdatFelvetelWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panels\AktivBetegekPanel.resx">
+      <DependentUpon>AktivBetegekPanel.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Windows\BetegAdatlapWindow.resx">
       <DependentUpon>BetegAdatlapWindow.cs</DependentUpon>
     </EmbeddedResource>
