@@ -80,7 +80,7 @@ namespace MediSupp
             this.tableLayoutPanel2.ColumnCount = 3;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 83.33333F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 120F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 124F));
             this.tableLayoutPanel2.Controls.Add(this.label2, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.APa_BetegKeresVegrehajt_bt, 2, 0);
             this.tableLayoutPanel2.Controls.Add(this.Apa_BetegKeres_txb, 1, 0);
@@ -89,7 +89,7 @@ namespace MediSupp
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(1161, 26);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(1206, 26);
             this.tableLayoutPanel2.TabIndex = 1;
             // 
             // label2
@@ -98,16 +98,16 @@ namespace MediSupp
             this.label2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.label2.Location = new System.Drawing.Point(3, 13);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(167, 13);
+            this.label2.Size = new System.Drawing.Size(174, 13);
             this.label2.TabIndex = 0;
             this.label2.Text = "Beteg tajszáma:";
             // 
             // APa_BetegKeresVegrehajt_bt
             // 
             this.APa_BetegKeresVegrehajt_bt.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.APa_BetegKeresVegrehajt_bt.Location = new System.Drawing.Point(1043, 3);
+            this.APa_BetegKeresVegrehajt_bt.Location = new System.Drawing.Point(1084, 3);
             this.APa_BetegKeresVegrehajt_bt.Name = "APa_BetegKeresVegrehajt_bt";
-            this.APa_BetegKeresVegrehajt_bt.Size = new System.Drawing.Size(115, 20);
+            this.APa_BetegKeresVegrehajt_bt.Size = new System.Drawing.Size(119, 20);
             this.APa_BetegKeresVegrehajt_bt.TabIndex = 2;
             this.APa_BetegKeresVegrehajt_bt.Text = "Keres";
             this.APa_BetegKeresVegrehajt_bt.UseVisualStyleBackColor = true;
@@ -116,18 +116,18 @@ namespace MediSupp
             // Apa_BetegKeres_txb
             // 
             this.Apa_BetegKeres_txb.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Apa_BetegKeres_txb.Location = new System.Drawing.Point(176, 3);
+            this.Apa_BetegKeres_txb.Location = new System.Drawing.Point(183, 3);
             this.Apa_BetegKeres_txb.Name = "Apa_BetegKeres_txb";
-            this.Apa_BetegKeres_txb.Size = new System.Drawing.Size(861, 20);
+            this.Apa_BetegKeres_txb.Size = new System.Drawing.Size(895, 20);
             this.Apa_BetegKeres_txb.TabIndex = 3;
             // 
             // lb4
             // 
             this.lb4.AutoSize = true;
             this.lb4.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.lb4.Location = new System.Drawing.Point(3, 10);
+            this.lb4.Location = new System.Drawing.Point(3, 9);
             this.lb4.Name = "lb4";
-            this.lb4.Size = new System.Drawing.Size(167, 13);
+            this.lb4.Size = new System.Drawing.Size(173, 13);
             this.lb4.TabIndex = 0;
             this.lb4.Text = "Beteg neve:";
             // 
@@ -135,9 +135,9 @@ namespace MediSupp
             // 
             this.lb5.AutoSize = true;
             this.lb5.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.lb5.Location = new System.Drawing.Point(3, 33);
+            this.lb5.Location = new System.Drawing.Point(3, 31);
             this.lb5.Name = "lb5";
-            this.lb5.Size = new System.Drawing.Size(167, 13);
+            this.lb5.Size = new System.Drawing.Size(173, 13);
             this.lb5.TabIndex = 1;
             this.lb5.Text = "Beteg születési helye:";
             // 
@@ -145,9 +145,9 @@ namespace MediSupp
             // 
             this.lb6.AutoSize = true;
             this.lb6.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.lb6.Location = new System.Drawing.Point(3, 56);
+            this.lb6.Location = new System.Drawing.Point(3, 53);
             this.lb6.Name = "lb6";
-            this.lb6.Size = new System.Drawing.Size(167, 13);
+            this.lb6.Size = new System.Drawing.Size(173, 13);
             this.lb6.TabIndex = 2;
             this.lb6.Text = "Beteg születési ideje:";
             // 
@@ -155,9 +155,9 @@ namespace MediSupp
             // 
             this.label7.AutoSize = true;
             this.label7.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.label7.Location = new System.Drawing.Point(3, 79);
+            this.label7.Location = new System.Drawing.Point(3, 75);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(167, 13);
+            this.label7.Size = new System.Drawing.Size(173, 13);
             this.label7.TabIndex = 3;
             this.label7.Text = "Beteg tajszáma:";
             // 
@@ -165,9 +165,9 @@ namespace MediSupp
             // 
             this.label8.AutoSize = true;
             this.label8.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.label8.Location = new System.Drawing.Point(3, 102);
+            this.label8.Location = new System.Drawing.Point(3, 97);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(167, 13);
+            this.label8.Size = new System.Drawing.Size(173, 13);
             this.label8.TabIndex = 4;
             this.label8.Text = "Felvétel időpontja:";
             // 
@@ -177,14 +177,14 @@ namespace MediSupp
             this.label9.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.label9.Location = new System.Drawing.Point(3, 125);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(167, 13);
+            this.label9.Size = new System.Drawing.Size(173, 13);
             this.label9.TabIndex = 5;
             this.label9.Text = "Elbocsájtás időpontja:";
             // 
             // AktivBetegNeve_lb
             // 
             this.AktivBetegNeve_lb.AutoSize = true;
-            this.AktivBetegNeve_lb.Location = new System.Drawing.Point(176, 0);
+            this.AktivBetegNeve_lb.Location = new System.Drawing.Point(182, 0);
             this.AktivBetegNeve_lb.Name = "AktivBetegNeve_lb";
             this.AktivBetegNeve_lb.Size = new System.Drawing.Size(0, 13);
             this.AktivBetegNeve_lb.TabIndex = 6;
@@ -195,7 +195,7 @@ namespace MediSupp
             this.label10.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.label10.Location = new System.Drawing.Point(3, 12);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(1155, 13);
+            this.label10.Size = new System.Drawing.Size(1200, 13);
             this.label10.TabIndex = 0;
             this.label10.Text = "Egyéb információ";
             // 
@@ -206,7 +206,7 @@ namespace MediSupp
             this.AktivBetegInformacio_txb.Multiline = true;
             this.AktivBetegInformacio_txb.Name = "AktivBetegInformacio_txb";
             this.AktivBetegInformacio_txb.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.AktivBetegInformacio_txb.Size = new System.Drawing.Size(1155, 162);
+            this.AktivBetegInformacio_txb.Size = new System.Drawing.Size(1200, 162);
             this.AktivBetegInformacio_txb.TabIndex = 1;
             // 
             // tableLayoutPanel7
@@ -217,7 +217,7 @@ namespace MediSupp
             this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 120F));
             this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 478F));
             this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 39F));
-            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 240F));
+            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 329F));
             this.tableLayoutPanel7.Controls.Add(this.AktivBetegFelvetelVegrehajt_bt, 0, 0);
             this.tableLayoutPanel7.Controls.Add(this.button2, 1, 0);
             this.tableLayoutPanel7.Controls.Add(this.button3, 2, 0);
@@ -228,7 +228,7 @@ namespace MediSupp
             this.tableLayoutPanel7.Name = "tableLayoutPanel7";
             this.tableLayoutPanel7.RowCount = 1;
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel7.Size = new System.Drawing.Size(1161, 27);
+            this.tableLayoutPanel7.Size = new System.Drawing.Size(1206, 27);
             this.tableLayoutPanel7.TabIndex = 6;
             // 
             // AktivBetegFelvetelVegrehajt_bt
@@ -292,13 +292,13 @@ namespace MediSupp
             this.tableLayoutPanel4.RowCount = 2;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(1161, 193);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(1206, 193);
             this.tableLayoutPanel4.TabIndex = 3;
             // 
             // AktivBetegSzulHely_lb
             // 
             this.AktivBetegSzulHely_lb.AutoSize = true;
-            this.AktivBetegSzulHely_lb.Location = new System.Drawing.Point(176, 23);
+            this.AktivBetegSzulHely_lb.Location = new System.Drawing.Point(182, 22);
             this.AktivBetegSzulHely_lb.Name = "AktivBetegSzulHely_lb";
             this.AktivBetegSzulHely_lb.Size = new System.Drawing.Size(0, 13);
             this.AktivBetegSzulHely_lb.TabIndex = 7;
@@ -306,21 +306,21 @@ namespace MediSupp
             // AktivBetegSzulIdo_lb
             // 
             this.AktivBetegSzulIdo_lb.AutoSize = true;
-            this.AktivBetegSzulIdo_lb.Location = new System.Drawing.Point(176, 46);
+            this.AktivBetegSzulIdo_lb.Location = new System.Drawing.Point(182, 44);
             this.AktivBetegSzulIdo_lb.Name = "AktivBetegSzulIdo_lb";
             this.AktivBetegSzulIdo_lb.Size = new System.Drawing.Size(0, 13);
             this.AktivBetegSzulIdo_lb.TabIndex = 8;
             // 
             // FelvetelIdopontja_dt
             // 
-            this.FelvetelIdopontja_dt.Location = new System.Drawing.Point(176, 95);
+            this.FelvetelIdopontja_dt.Location = new System.Drawing.Point(182, 91);
             this.FelvetelIdopontja_dt.Name = "FelvetelIdopontja_dt";
             this.FelvetelIdopontja_dt.Size = new System.Drawing.Size(200, 20);
             this.FelvetelIdopontja_dt.TabIndex = 10;
             // 
             // ElbocsajtasIdopontja_dt
             // 
-            this.ElbocsajtasIdopontja_dt.Location = new System.Drawing.Point(176, 118);
+            this.ElbocsajtasIdopontja_dt.Location = new System.Drawing.Point(182, 113);
             this.ElbocsajtasIdopontja_dt.Name = "ElbocsajtasIdopontja_dt";
             this.ElbocsajtasIdopontja_dt.Size = new System.Drawing.Size(200, 20);
             this.ElbocsajtasIdopontja_dt.TabIndex = 11;
@@ -331,7 +331,7 @@ namespace MediSupp
             this.label11.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.label11.Location = new System.Drawing.Point(3, 12);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(1155, 13);
+            this.label11.Size = new System.Drawing.Size(1200, 13);
             this.label11.TabIndex = 0;
             this.label11.Text = "Beteg panasza";
             // 
@@ -342,7 +342,7 @@ namespace MediSupp
             this.AktivBetegPanasza_txb.Multiline = true;
             this.AktivBetegPanasza_txb.Name = "AktivBetegPanasza_txb";
             this.AktivBetegPanasza_txb.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.AktivBetegPanasza_txb.Size = new System.Drawing.Size(1155, 160);
+            this.AktivBetegPanasza_txb.Size = new System.Drawing.Size(1200, 160);
             this.AktivBetegPanasza_txb.TabIndex = 1;
             // 
             // tableLayoutPanel5
@@ -357,7 +357,7 @@ namespace MediSupp
             this.tableLayoutPanel5.RowCount = 2;
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(1161, 191);
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(1206, 191);
             this.tableLayoutPanel5.TabIndex = 4;
             // 
             // label12
@@ -366,7 +366,7 @@ namespace MediSupp
             this.label12.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.label12.Location = new System.Drawing.Point(3, 12);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(1155, 13);
+            this.label12.Size = new System.Drawing.Size(1200, 13);
             this.label12.TabIndex = 0;
             this.label12.Text = "Kezelés";
             // 
@@ -376,7 +376,7 @@ namespace MediSupp
             this.AktivBetegKezeles_txb.Location = new System.Drawing.Point(3, 28);
             this.AktivBetegKezeles_txb.Multiline = true;
             this.AktivBetegKezeles_txb.Name = "AktivBetegKezeles_txb";
-            this.AktivBetegKezeles_txb.Size = new System.Drawing.Size(1155, 153);
+            this.AktivBetegKezeles_txb.Size = new System.Drawing.Size(1200, 153);
             this.AktivBetegKezeles_txb.TabIndex = 1;
             // 
             // tableLayoutPanel6
@@ -391,7 +391,7 @@ namespace MediSupp
             this.tableLayoutPanel6.RowCount = 2;
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel6.Size = new System.Drawing.Size(1161, 184);
+            this.tableLayoutPanel6.Size = new System.Drawing.Size(1206, 184);
             this.tableLayoutPanel6.TabIndex = 5;
             // 
             // AktivBetegLayoutPanel
@@ -417,7 +417,7 @@ namespace MediSupp
             this.AktivBetegLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 199F));
             this.AktivBetegLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 197F));
             this.AktivBetegLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 190F));
-            this.AktivBetegLayoutPanel.Size = new System.Drawing.Size(1184, 806);
+            this.AktivBetegLayoutPanel.Size = new System.Drawing.Size(1212, 817);
             this.AktivBetegLayoutPanel.TabIndex = 5;
             // 
             // tableLayoutPanel1
@@ -447,14 +447,14 @@ namespace MediSupp
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1161, 138);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1206, 138);
             this.tableLayoutPanel1.TabIndex = 0;
             this.tableLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel1_Paint);
             // 
             // AktivBetegTajszam_lb
             // 
             this.AktivBetegTajszam_lb.AutoSize = true;
-            this.AktivBetegTajszam_lb.Location = new System.Drawing.Point(176, 69);
+            this.AktivBetegTajszam_lb.Location = new System.Drawing.Point(182, 66);
             this.AktivBetegTajszam_lb.Name = "AktivBetegTajszam_lb";
             this.AktivBetegTajszam_lb.Size = new System.Drawing.Size(0, 13);
             this.AktivBetegTajszam_lb.TabIndex = 9;
@@ -464,7 +464,7 @@ namespace MediSupp
             this.tableLayoutPanel3.ColumnCount = 3;
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 83.33334F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 120F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 124F));
             this.tableLayoutPanel3.Controls.Add(this.label1, 0, 0);
             this.tableLayoutPanel3.Controls.Add(this.KezeloOrvos_cbx, 1, 0);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -472,7 +472,7 @@ namespace MediSupp
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(1161, 27);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(1206, 27);
             this.tableLayoutPanel3.TabIndex = 7;
             this.tableLayoutPanel3.TabStop = true;
             this.tableLayoutPanel3.UseWaitCursor = true;
@@ -483,7 +483,7 @@ namespace MediSupp
             this.label1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.label1.Location = new System.Drawing.Point(3, 14);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(167, 13);
+            this.label1.Size = new System.Drawing.Size(174, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "Kezelő orvos:";
             this.label1.UseWaitCursor = true;
@@ -491,9 +491,9 @@ namespace MediSupp
             // KezeloOrvos_cbx
             // 
             this.KezeloOrvos_cbx.FormattingEnabled = true;
-            this.KezeloOrvos_cbx.Location = new System.Drawing.Point(176, 3);
+            this.KezeloOrvos_cbx.Location = new System.Drawing.Point(183, 3);
             this.KezeloOrvos_cbx.Name = "KezeloOrvos_cbx";
-            this.KezeloOrvos_cbx.Size = new System.Drawing.Size(861, 21);
+            this.KezeloOrvos_cbx.Size = new System.Drawing.Size(883, 21);
             this.KezeloOrvos_cbx.TabIndex = 1;
             this.KezeloOrvos_cbx.UseWaitCursor = true;
             // 
@@ -501,7 +501,7 @@ namespace MediSupp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1184, 806);
+            this.ClientSize = new System.Drawing.Size(1212, 817);
             this.Controls.Add(this.AktivBetegLayoutPanel);
             this.Name = "AktivBetegAdatFelvetel";
             this.Text = "AktivBetegAdatFelvetel";
@@ -558,9 +558,9 @@ namespace MediSupp
         public System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox KezeloOrvos_cbx;
         public System.Windows.Forms.TextBox AktivBetegInformacio_txb;
         public System.Windows.Forms.TextBox AktivBetegKezeles_txb;
         public System.Windows.Forms.TextBox Apa_BetegKeres_txb;
+        public System.Windows.Forms.ComboBox KezeloOrvos_cbx;
     }
 }

@@ -58,6 +58,7 @@ namespace MediSupp
         {
             InitializeComponent();
             KezeloOrvosListaFeltoltes();
+            BetegFuggvenyek.BetegAdatLekeres();
         }
 
         private void AktivBetegAdatFelvetel_Load(object sender, EventArgs e)
@@ -84,7 +85,24 @@ namespace MediSupp
                 }
             }
 
-            BetegFuggvenyek.AktivBetegFelvetel(AktivBetegNeve_lb.Text,OrvosPecset, FelvetelIdopontja_dt.Text,AktivBetegPanasza_txb.Text,AktivBetegKezeles_txb.Text);
+            BetegFuggvenyek.AktivBetegFelvetel(AktivBetegTajszam_lb.Text,OrvosPecset, FelvetelIdopontja_dt.Text,AktivBetegPanasza_txb.Text,AktivBetegKezeles_txb.Text);
+
+            using (SqlConnection Csatlakozas = new SqlConnection(AdatbazisInfo.ServerInfo))
+            {
+                string modositas = $"UPDATE beteg " +
+                $"SET aktivbeteg = @aktivbeteg," +               
+                $"kezeloorvos = @kezeloorvos " +
+                $"WHERE betegtajszam = {AktivBetegTajszam_lb.Text}";
+                using (SqlCommand Parancs = new SqlCommand(modositas, Csatlakozas))
+                {
+                    Parancs.Parameters.AddWithValue("@aktivbeteg", "aktiv");
+                    Parancs.Parameters.AddWithValue("@kezeloorvos",OrvosPecset);                    
+                    Csatlakozas.Open();
+                    Parancs.ExecuteNonQuery();                  
+
+                }
+
+            }
         }
 
         private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)

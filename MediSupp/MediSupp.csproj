@@ -61,6 +61,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="PatientClasses\AktivBetegFelvetelIdeje.cs" />
     <Compile Include="Windows\AktivBetegAdatFelvetelWindow.cs">
       <SubType>Form</SubType>
     </Compile>

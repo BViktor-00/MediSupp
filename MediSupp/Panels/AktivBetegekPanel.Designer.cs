@@ -29,57 +29,35 @@ namespace MediSupp.Panels
         /// </summary>
         private void InitializeComponent()
         {
-            this.tajszam = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.szulhely = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.betegnev = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.betegtajkeres_txb = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.betegadatkereses_bt = new System.Windows.Forms.Button();
-            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BetegAdatModositas_bt = new System.Windows.Forms.Button();
             this.BetegAdatFrissites_bt = new System.Windows.Forms.Button();
             this.UjAktivBetegFelvetele_bt = new System.Windows.Forms.Button();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.BetegDataList = new System.Windows.Forms.DataGridView();
-            this.szulido = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.AktivBetegDataGrid = new System.Windows.Forms.DataGridView();
+            this.betegtajszam = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.betegneve = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.kezeloorvos = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.felvetelideje = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tableLayoutPanel4.SuspendLayout();
             this.tableLayoutPanel5.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.BetegDataList)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AktivBetegDataGrid)).BeginInit();
             this.SuspendLayout();
-            // 
-            // tajszam
-            // 
-            this.tajszam.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.tajszam.HeaderText = "Tajszám";
-            this.tajszam.Name = "tajszam";
-            this.tajszam.ReadOnly = true;
-            // 
-            // szulhely
-            // 
-            this.szulhely.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.szulhely.HeaderText = "Születési hely";
-            this.szulhely.Name = "szulhely";
-            this.szulhely.ReadOnly = true;
-            // 
-            // betegnev
-            // 
-            this.betegnev.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.betegnev.HeaderText = "Beteg neve";
-            this.betegnev.Name = "betegnev";
-            this.betegnev.ReadOnly = true;
             // 
             // tableLayoutPanel4
             // 
             this.tableLayoutPanel4.ColumnCount = 3;
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.62989F));
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 66.37011F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 190F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 191F));
             this.tableLayoutPanel4.Controls.Add(this.betegtajkeres_txb, 0, 1);
             this.tableLayoutPanel4.Controls.Add(this.label1, 0, 0);
             this.tableLayoutPanel4.Controls.Add(this.label5, 0, 1);
@@ -98,7 +76,7 @@ namespace MediSupp.Panels
             this.betegtajkeres_txb.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.betegtajkeres_txb.Location = new System.Drawing.Point(191, 29);
             this.betegtajkeres_txb.Name = "betegtajkeres_txb";
-            this.betegtajkeres_txb.Size = new System.Drawing.Size(366, 20);
+            this.betegtajkeres_txb.Size = new System.Drawing.Size(365, 20);
             this.betegtajkeres_txb.TabIndex = 6;
             // 
             // label1
@@ -126,20 +104,13 @@ namespace MediSupp.Panels
             // betegadatkereses_bt
             // 
             this.betegadatkereses_bt.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.betegadatkereses_bt.Location = new System.Drawing.Point(563, 29);
+            this.betegadatkereses_bt.Location = new System.Drawing.Point(562, 29);
             this.betegadatkereses_bt.Name = "betegadatkereses_bt";
-            this.betegadatkereses_bt.Size = new System.Drawing.Size(185, 20);
+            this.betegadatkereses_bt.Size = new System.Drawing.Size(186, 20);
             this.betegadatkereses_bt.TabIndex = 7;
             this.betegadatkereses_bt.Text = "Keres";
             this.betegadatkereses_bt.UseVisualStyleBackColor = true;
             this.betegadatkereses_bt.Click += new System.EventHandler(this.betegadatkereses_bt_Click);
-            // 
-            // id
-            // 
-            this.id.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.id.HeaderText = "ID";
-            this.id.Name = "id";
-            this.id.ReadOnly = true;
             // 
             // BetegAdatModositas_bt
             // 
@@ -211,7 +182,7 @@ namespace MediSupp.Panels
             this.tableLayoutPanel1.ColumnCount = 1;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel3, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.BetegDataList, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.AktivBetegDataGrid, 0, 1);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -222,27 +193,46 @@ namespace MediSupp.Panels
             this.tableLayoutPanel1.Size = new System.Drawing.Size(763, 673);
             this.tableLayoutPanel1.TabIndex = 2;
             // 
-            // BetegDataList
+            // AktivBetegDataGrid
             // 
-            this.BetegDataList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.BetegDataList.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.id,
-            this.betegnev,
-            this.szulhely,
-            this.szulido,
-            this.tajszam});
-            this.BetegDataList.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.BetegDataList.Location = new System.Drawing.Point(3, 112);
-            this.BetegDataList.Name = "BetegDataList";
-            this.BetegDataList.Size = new System.Drawing.Size(757, 540);
-            this.BetegDataList.TabIndex = 1;
+            this.AktivBetegDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.AktivBetegDataGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.betegtajszam,
+            this.betegneve,
+            this.kezeloorvos,
+            this.felvetelideje});
+            this.AktivBetegDataGrid.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.AktivBetegDataGrid.Location = new System.Drawing.Point(3, 112);
+            this.AktivBetegDataGrid.Name = "AktivBetegDataGrid";
+            this.AktivBetegDataGrid.Size = new System.Drawing.Size(757, 540);
+            this.AktivBetegDataGrid.TabIndex = 1;
             // 
-            // szulido
+            // betegtajszam
             // 
-            this.szulido.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.szulido.HeaderText = "Születési idő";
-            this.szulido.Name = "szulido";
-            this.szulido.ReadOnly = true;
+            this.betegtajszam.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.betegtajszam.HeaderText = "Beteg tajszáma";
+            this.betegtajszam.Name = "betegtajszam";
+            this.betegtajszam.ReadOnly = true;
+            // 
+            // betegneve
+            // 
+            this.betegneve.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.betegneve.HeaderText = "Beteg neve";
+            this.betegneve.Name = "betegneve";
+            // 
+            // kezeloorvos
+            // 
+            this.kezeloorvos.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.kezeloorvos.HeaderText = "Kezelő orvos";
+            this.kezeloorvos.Name = "kezeloorvos";
+            this.kezeloorvos.ReadOnly = true;
+            // 
+            // felvetelideje
+            // 
+            this.felvetelideje.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.felvetelideje.HeaderText = "Felvétel ideje";
+            this.felvetelideje.Name = "felvetelideje";
+            this.felvetelideje.ReadOnly = true;
             // 
             // AktivBetegekPanel
             // 
@@ -256,29 +246,27 @@ namespace MediSupp.Panels
             this.tableLayoutPanel5.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.BetegDataList)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AktivBetegDataGrid)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.DataGridViewTextBoxColumn tajszam;
-        private System.Windows.Forms.DataGridViewTextBoxColumn szulhely;
-        private System.Windows.Forms.DataGridViewTextBoxColumn betegnev;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
         private System.Windows.Forms.TextBox betegtajkeres_txb;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button betegadatkereses_bt;
-        private System.Windows.Forms.DataGridViewTextBoxColumn id;
         private System.Windows.Forms.Button BetegAdatModositas_bt;
         private System.Windows.Forms.Button BetegAdatFrissites_bt;
         private System.Windows.Forms.Button UjAktivBetegFelvetele_bt;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.DataGridView BetegDataList;
-        private System.Windows.Forms.DataGridViewTextBoxColumn szulido;
+        private System.Windows.Forms.DataGridView AktivBetegDataGrid;
+        private System.Windows.Forms.DataGridViewTextBoxColumn betegtajszam;
+        private System.Windows.Forms.DataGridViewTextBoxColumn betegneve;
+        private System.Windows.Forms.DataGridViewTextBoxColumn kezeloorvos;
+        private System.Windows.Forms.DataGridViewTextBoxColumn felvetelideje;
     }
 }

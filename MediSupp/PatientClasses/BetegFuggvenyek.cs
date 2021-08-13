@@ -13,6 +13,7 @@ namespace MediSupp
     {
 
         public static List<BetegAdatok> BetegAdatLista = new List<BetegAdatok>();
+        public static List<AktivBetegFelvetelIdeje> AktivBetegSegedLista = new List<AktivBetegFelvetelIdeje>();
        
         public static void BetegAdatfeltoltes(string nev, string szulhely, string datum,int eletkor, string tajszam, string beteginformacio)
         {        
@@ -21,7 +22,7 @@ namespace MediSupp
             {
                 using (SqlConnection Csatlakozas = new SqlConnection(AdatbazisInfo.ServerInfo))
                 {
-                    string feltoltes = "INSERT INTO beteg VALUES (@betegneve,@betegszulhely,@betegszulido,@betegeletkor,@betegtajszam,@beteginfo,@betegkorelozmeny)";
+                    string feltoltes = "INSERT INTO beteg VALUES (@betegneve,@betegszulhely,@betegszulido,@betegeletkor,@betegtajszam,@beteginfo,@betegkorelozmeny,@aktivbeteg,@kezeloorvos)";
                     using (SqlCommand Parancs = new SqlCommand(feltoltes, Csatlakozas))
                     {
                         Parancs.Parameters.AddWithValue("@betegneve", nev);
@@ -31,6 +32,8 @@ namespace MediSupp
                         Parancs.Parameters.AddWithValue("@betegtajszam", tajszam);
                         Parancs.Parameters.AddWithValue("@beteginfo", beteginformacio);
                         Parancs.Parameters.AddWithValue("@betegkorelozmeny", "nincs");
+                        Parancs.Parameters.AddWithValue("@aktivbeteg", "nem_aktiv");
+                        Parancs.Parameters.AddWithValue("@kezeloorvos", "nincs");
                         Csatlakozas.Open();
                         Parancs.ExecuteNonQuery();
 
@@ -87,7 +90,7 @@ namespace MediSupp
                         SqlDataReader LekerdezesParancs = Parancs.ExecuteReader();
                         while (LekerdezesParancs.Read())
                         {
-                            BetegAdatLista.Add(new BetegAdatok(Convert.ToInt32(LekerdezesParancs["Id"]), Convert.ToString(LekerdezesParancs["betegneve"]), Convert.ToString(LekerdezesParancs["betegszulhely"]), Convert.ToString(LekerdezesParancs["betegszulido"]), Convert.ToInt32(LekerdezesParancs["betegeletkor"]), Convert.ToString(LekerdezesParancs["betegtajszam"]), Convert.ToString(LekerdezesParancs["beteginfo"]), Convert.ToString(LekerdezesParancs["betegkorelozmeny"])));
+                            BetegAdatLista.Add(new BetegAdatok(Convert.ToInt32(LekerdezesParancs["Id"]), Convert.ToString(LekerdezesParancs["betegneve"]), Convert.ToString(LekerdezesParancs["betegszulhely"]), Convert.ToString(LekerdezesParancs["betegszulido"]), Convert.ToInt32(LekerdezesParancs["betegeletkor"]), Convert.ToString(LekerdezesParancs["betegtajszam"]), Convert.ToString(LekerdezesParancs["beteginfo"]), Convert.ToString(LekerdezesParancs["betegkorelozmeny"]), Convert.ToString(LekerdezesParancs["aktivbeteg"]), Convert.ToString(LekerdezesParancs["kezeloorvos"])));
                         }
                     }
 
@@ -101,7 +104,65 @@ namespace MediSupp
 
 
         }
-                       
+
+
+        public static void AktivBetegAdatLekeres()
+
+        {
+            
+            try
+            {
+                using (SqlConnection Csatlakozas = new SqlConnection(AdatbazisInfo.ServerInfo))
+                {
+                    string lekerdezes = "SELECT * FROM beteg WHERE aktivbeteg='aktiv'";
+                    using (SqlCommand Parancs = new SqlCommand(lekerdezes, Csatlakozas))
+                    {
+                        Csatlakozas.Open();
+                        SqlDataReader LekerdezesParancs = Parancs.ExecuteReader();
+                        while (LekerdezesParancs.Read())
+                        {
+                            
+                            BetegAdatLista.Add(new BetegAdatok(Convert.ToInt32(LekerdezesParancs["Id"]), Convert.ToString(LekerdezesParancs["betegneve"]), Convert.ToString(LekerdezesParancs["betegszulhely"]), Convert.ToString(LekerdezesParancs["betegszulido"]), Convert.ToInt32(LekerdezesParancs["betegeletkor"]), Convert.ToString(LekerdezesParancs["betegtajszam"]), Convert.ToString(LekerdezesParancs["beteginfo"]), Convert.ToString(LekerdezesParancs["betegkorelozmeny"]), Convert.ToString(LekerdezesParancs["aktivbeteg"]), Convert.ToString(LekerdezesParancs["kezeloorvos"])));
+                        }
+                    }
+
+                }
+            }
+            catch (Exception)
+            {
+
+                MessageBox.Show("Hiba a kiolvasás során!", "HIBA", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+
+        }
+
+        public static void AktivBetegSegedListaFeltoltes()
+        {
+            try
+            {
+                using (SqlConnection Csatlakozas = new SqlConnection(AdatbazisInfo.ServerInfo))
+                {
+                    string lekerdezes = "SELECT * FROM aktivbetegek";
+                    using (SqlCommand Parancs = new SqlCommand(lekerdezes, Csatlakozas))
+                    {
+                        Csatlakozas.Open();
+                        SqlDataReader LekerdezesParancs = Parancs.ExecuteReader();
+                        while (LekerdezesParancs.Read())
+                        {
+                            AktivBetegSegedLista.Add(new AktivBetegFelvetelIdeje(Convert.ToString(LekerdezesParancs["betegtajszam"]), Convert.ToString(LekerdezesParancs["felvetelideje"])));
+                        }
+                    }
+
+                }
+            }
+            catch (Exception)
+            {
+
+                MessageBox.Show("Hiba a kiolvasás során!", "HIBA", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
         public static void BetegAdatModositas(string nev, string szulhely, string datum, int eletkor, string tajszam, string beteginformacio,int betegid)
         {
            

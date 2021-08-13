@@ -14,7 +14,6 @@ namespace MediSupp
     public class OrvosFuggvenyek
     {
        
-
         public static List<OrvosAdatok> OrvosLista = new List<OrvosAdatok>();
 
         public static void OrvosAdatfeltoltes(string nev, string szakterulet, string emailcim,string pecsetszam)
@@ -104,6 +103,7 @@ namespace MediSupp
             }
 
         }
+                
 
     }
 }
