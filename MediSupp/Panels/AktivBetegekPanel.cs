@@ -14,24 +14,86 @@ namespace MediSupp.Panels
 {
     public partial class AktivBetegekPanel : UserControl
     {
+        
+        
 
-   
+        public void AktivBetegAdatModositas()
+        {
+            AktivBetegAdatFelvetel AktivBetegWindow = new AktivBetegAdatFelvetel();
+            string BetegTajSzam = Convert.ToString(AktivBetegDataGrid.SelectedCells[0].Value);
+            string OrvosPecsetszam = "";
+
+            for (int i = 0; i < BetegFuggvenyek.BetegAdatLista.Count; i++)
+            {
+                if(BetegFuggvenyek.BetegAdatLista[i].betegtajszam == BetegTajSzam)
+                {
+                    OrvosPecsetszam = BetegFuggvenyek.BetegAdatLista[i].kezeloorvos;
+                }
+            }
+
+            MessageBox.Show($"{BetegTajSzam},{OrvosPecsetszam}");
+
+            AktivBetegWindow.Show();
+            try
+            {
+                for (int i = 0; i < BetegFuggvenyek.BetegAdatLista.Count; i++)
+                {
+                    if (BetegFuggvenyek.BetegAdatLista[i].betegtajszam == BetegTajSzam)
+                    {
+                        AktivBetegWindow.AktivBetegNeve_lb.Text = BetegFuggvenyek.BetegAdatLista[i].betegneve;
+                        AktivBetegWindow.AktivBetegSzulHely_lb.Text = BetegFuggvenyek.BetegAdatLista[i].betegszulhely;
+                        AktivBetegWindow.AktivBetegSzulIdo_lb.Text = BetegFuggvenyek.BetegAdatLista[i].betegszulido;
+                        AktivBetegWindow.AktivBetegTajszam_lb.Text = BetegFuggvenyek.BetegAdatLista[i].betegtajszam;
+                        AktivBetegWindow.AktivBetegInformacio_txb.Text = BetegFuggvenyek.BetegAdatLista[i].beteginfo;
+                        
+                    }                                                                    
+
+                }
+
+                for (int i = 0; i < BetegFuggvenyek.AktivBetegSegedLista.Count; i++)
+                {
+                    if (BetegFuggvenyek.AktivBetegSegedLista[i].aktivbetegtajszam == BetegTajSzam)
+                    {
+                        AktivBetegWindow.AktivBetegPanasza_txb.Text = BetegFuggvenyek.AktivBetegSegedLista[i].betegpanasza;
+                        AktivBetegWindow.AktivBetegKezeles_txb.Text = BetegFuggvenyek.AktivBetegSegedLista[i].kezeles;
+                        AktivBetegWindow.FelvetelIdopontja_dt.Text = BetegFuggvenyek.AktivBetegSegedLista[i].aktivbetegfelvetelido;
+                        AktivBetegWindow.ElbocsajtasIdopontja_dt.Text = "";
+                    }
+
+                }
+
+                for (int i = 0; i < OrvosFuggvenyek.OrvosLista.Count; i++)
+                {
+                    if (OrvosFuggvenyek.OrvosLista[i].orvospecset == OrvosPecsetszam)
+                    {
+                        AktivBetegWindow.KezeloOrvos_cbx.Text = OrvosFuggvenyek.OrvosLista[i].nev;
+                    }
+
+                }
+
+
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("A művelet nem végrehajtható!", "HIBA", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
 
         public void AktivBetegDataGridFeltoltes()
         {
-            AktivBetegDataGrid.Rows.Clear();
-            BetegFuggvenyek.BetegAdatLista.Clear();
+            AktivBetegDataGrid.Rows.Clear();            
             OrvosFuggvenyek.OrvosLista.Clear();
-            OrvosFuggvenyek.OrvosAdatAdatLekeres();
+            BetegFuggvenyek.AktivBetegSegedLista.Clear();
+            BetegFuggvenyek.BetegAdatLista.Clear();
+            OrvosFuggvenyek.OrvosAdatAdatLekeres();         
             BetegFuggvenyek.AktivBetegAdatLekeres();
             BetegFuggvenyek.AktivBetegSegedListaFeltoltes();
 
+
             string Orvos = "";
             string FelvetelIdeje = "";
-
+           
             
-            
-
             for (int i = 0; i < BetegFuggvenyek.BetegAdatLista.Count; i++)
             {
 
@@ -79,6 +141,11 @@ namespace MediSupp.Panels
         {
             AktivBetegAdatFelvetel AktivBetegWindow = new AktivBetegAdatFelvetel();
             AktivBetegWindow.Show();
+        }
+
+        private void AktivBetegAdatModositas_bt_Click(object sender, EventArgs e)
+        {
+            AktivBetegAdatModositas();
         }
     }
 }

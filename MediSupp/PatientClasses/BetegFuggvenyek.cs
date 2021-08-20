@@ -13,7 +13,7 @@ namespace MediSupp
     {
 
         public static List<BetegAdatok> BetegAdatLista = new List<BetegAdatok>();
-        public static List<AktivBetegFelvetelIdeje> AktivBetegSegedLista = new List<AktivBetegFelvetelIdeje>();
+        public static List<AktivBetegAdatok> AktivBetegSegedLista = new List<AktivBetegAdatok>();
        
         public static void BetegAdatfeltoltes(string nev, string szulhely, string datum,int eletkor, string tajszam, string beteginformacio)
         {        
@@ -105,7 +105,6 @@ namespace MediSupp
 
         }
 
-
         public static void AktivBetegAdatLekeres()
 
         {
@@ -150,7 +149,7 @@ namespace MediSupp
                         SqlDataReader LekerdezesParancs = Parancs.ExecuteReader();
                         while (LekerdezesParancs.Read())
                         {
-                            AktivBetegSegedLista.Add(new AktivBetegFelvetelIdeje(Convert.ToString(LekerdezesParancs["betegtajszam"]), Convert.ToString(LekerdezesParancs["felvetelideje"])));
+                            AktivBetegSegedLista.Add(new AktivBetegAdatok(Convert.ToString(LekerdezesParancs["betegtajszam"]), Convert.ToString(LekerdezesParancs["felvetelideje"]), Convert.ToString(LekerdezesParancs["betegpanasza"]), Convert.ToString(LekerdezesParancs["kezeles"])));
                         }
                     }
 

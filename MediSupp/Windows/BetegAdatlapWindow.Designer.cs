@@ -166,6 +166,7 @@ namespace MediSupp
             this.betegneve_txb.Name = "betegneve_txb";
             this.betegneve_txb.Size = new System.Drawing.Size(605, 20);
             this.betegneve_txb.TabIndex = 5;
+            this.betegneve_txb.TextChanged += new System.EventHandler(this.betegneve_txb_TextChanged);
             // 
             // beteg_szul_hely_txb
             // 
@@ -304,7 +305,7 @@ namespace MediSupp
             this.tableLayoutPanel7.ColumnCount = 3;
             this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20.50473F));
             this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 79.49527F));
-            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 86F));
+            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 87F));
             this.tableLayoutPanel7.Controls.Add(this.szoveg_lb, 0, 0);
             this.tableLayoutPanel7.Controls.Add(this.keresettbetegid_lb, 1, 0);
             this.tableLayoutPanel7.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -331,7 +332,7 @@ namespace MediSupp
             this.keresettbetegid_lb.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.keresettbetegid_lb.Location = new System.Drawing.Point(132, 11);
             this.keresettbetegid_lb.Name = "keresettbetegid_lb";
-            this.keresettbetegid_lb.Size = new System.Drawing.Size(496, 13);
+            this.keresettbetegid_lb.Size = new System.Drawing.Size(495, 13);
             this.keresettbetegid_lb.TabIndex = 1;
             // 
             // BetegAdatlapWindow

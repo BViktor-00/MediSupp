@@ -34,7 +34,7 @@ namespace MediSupp.Panels
             this.label1 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.betegadatkereses_bt = new System.Windows.Forms.Button();
-            this.BetegAdatModositas_bt = new System.Windows.Forms.Button();
+            this.AktivBetegAdatModositas_bt = new System.Windows.Forms.Button();
             this.BetegAdatFrissites_bt = new System.Windows.Forms.Button();
             this.UjAktivBetegFelvetele_bt = new System.Windows.Forms.Button();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
@@ -57,7 +57,7 @@ namespace MediSupp.Panels
             this.tableLayoutPanel4.ColumnCount = 3;
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.62989F));
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 66.37011F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 191F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 192F));
             this.tableLayoutPanel4.Controls.Add(this.betegtajkeres_txb, 0, 1);
             this.tableLayoutPanel4.Controls.Add(this.label1, 0, 0);
             this.tableLayoutPanel4.Controls.Add(this.label5, 0, 1);
@@ -74,7 +74,7 @@ namespace MediSupp.Panels
             // betegtajkeres_txb
             // 
             this.betegtajkeres_txb.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.betegtajkeres_txb.Location = new System.Drawing.Point(191, 29);
+            this.betegtajkeres_txb.Location = new System.Drawing.Point(190, 29);
             this.betegtajkeres_txb.Name = "betegtajkeres_txb";
             this.betegtajkeres_txb.Size = new System.Drawing.Size(365, 20);
             this.betegtajkeres_txb.TabIndex = 6;
@@ -86,7 +86,7 @@ namespace MediSupp.Panels
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label1.Location = new System.Drawing.Point(3, 10);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(182, 16);
+            this.label1.Size = new System.Drawing.Size(181, 16);
             this.label1.TabIndex = 0;
             this.label1.Text = "Keresés";
             // 
@@ -97,30 +97,31 @@ namespace MediSupp.Panels
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label5.Location = new System.Drawing.Point(3, 36);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(182, 16);
+            this.label5.Size = new System.Drawing.Size(181, 16);
             this.label5.TabIndex = 1;
             this.label5.Text = "Beteg tajszáma:";
             // 
             // betegadatkereses_bt
             // 
             this.betegadatkereses_bt.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.betegadatkereses_bt.Location = new System.Drawing.Point(562, 29);
+            this.betegadatkereses_bt.Location = new System.Drawing.Point(561, 29);
             this.betegadatkereses_bt.Name = "betegadatkereses_bt";
-            this.betegadatkereses_bt.Size = new System.Drawing.Size(186, 20);
+            this.betegadatkereses_bt.Size = new System.Drawing.Size(187, 20);
             this.betegadatkereses_bt.TabIndex = 7;
             this.betegadatkereses_bt.Text = "Keres";
             this.betegadatkereses_bt.UseVisualStyleBackColor = true;
             this.betegadatkereses_bt.Click += new System.EventHandler(this.betegadatkereses_bt_Click);
             // 
-            // BetegAdatModositas_bt
+            // AktivBetegAdatModositas_bt
             // 
-            this.BetegAdatModositas_bt.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.BetegAdatModositas_bt.Location = new System.Drawing.Point(377, 6);
-            this.BetegAdatModositas_bt.Name = "BetegAdatModositas_bt";
-            this.BetegAdatModositas_bt.Size = new System.Drawing.Size(181, 22);
-            this.BetegAdatModositas_bt.TabIndex = 5;
-            this.BetegAdatModositas_bt.Text = "Módosítás";
-            this.BetegAdatModositas_bt.UseVisualStyleBackColor = true;
+            this.AktivBetegAdatModositas_bt.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.AktivBetegAdatModositas_bt.Location = new System.Drawing.Point(377, 6);
+            this.AktivBetegAdatModositas_bt.Name = "AktivBetegAdatModositas_bt";
+            this.AktivBetegAdatModositas_bt.Size = new System.Drawing.Size(181, 22);
+            this.AktivBetegAdatModositas_bt.TabIndex = 5;
+            this.AktivBetegAdatModositas_bt.Text = "Módosítás";
+            this.AktivBetegAdatModositas_bt.UseVisualStyleBackColor = true;
+            this.AktivBetegAdatModositas_bt.Click += new System.EventHandler(this.AktivBetegAdatModositas_bt_Click);
             // 
             // BetegAdatFrissites_bt
             // 
@@ -151,7 +152,7 @@ namespace MediSupp.Panels
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel5.Controls.Add(this.BetegAdatModositas_bt, 0, 0);
+            this.tableLayoutPanel5.Controls.Add(this.AktivBetegAdatModositas_bt, 0, 0);
             this.tableLayoutPanel5.Controls.Add(this.BetegAdatFrissites_bt, 0, 0);
             this.tableLayoutPanel5.Controls.Add(this.UjAktivBetegFelvetele_bt, 0, 0);
             this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -257,7 +258,7 @@ namespace MediSupp.Panels
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button betegadatkereses_bt;
-        private System.Windows.Forms.Button BetegAdatModositas_bt;
+        private System.Windows.Forms.Button AktivBetegAdatModositas_bt;
         private System.Windows.Forms.Button BetegAdatFrissites_bt;
         private System.Windows.Forms.Button UjAktivBetegFelvetele_bt;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;

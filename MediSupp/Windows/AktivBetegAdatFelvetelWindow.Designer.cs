@@ -44,8 +44,8 @@ namespace MediSupp
             this.AktivBetegInformacio_txb = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
             this.AktivBetegFelvetelVegrehajt_bt = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.BetegElbocsajt_bt = new System.Windows.Forms.Button();
+            this.AktivBetegModositVegrehajt_bt = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
@@ -80,7 +80,7 @@ namespace MediSupp
             this.tableLayoutPanel2.ColumnCount = 3;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 83.33333F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 124F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 128F));
             this.tableLayoutPanel2.Controls.Add(this.label2, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.APa_BetegKeresVegrehajt_bt, 2, 0);
             this.tableLayoutPanel2.Controls.Add(this.Apa_BetegKeres_txb, 1, 0);
@@ -98,16 +98,16 @@ namespace MediSupp
             this.label2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.label2.Location = new System.Drawing.Point(3, 13);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(174, 13);
+            this.label2.Size = new System.Drawing.Size(173, 13);
             this.label2.TabIndex = 0;
             this.label2.Text = "Beteg tajszáma:";
             // 
             // APa_BetegKeresVegrehajt_bt
             // 
             this.APa_BetegKeresVegrehajt_bt.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.APa_BetegKeresVegrehajt_bt.Location = new System.Drawing.Point(1084, 3);
+            this.APa_BetegKeresVegrehajt_bt.Location = new System.Drawing.Point(1080, 3);
             this.APa_BetegKeresVegrehajt_bt.Name = "APa_BetegKeresVegrehajt_bt";
-            this.APa_BetegKeresVegrehajt_bt.Size = new System.Drawing.Size(119, 20);
+            this.APa_BetegKeresVegrehajt_bt.Size = new System.Drawing.Size(123, 20);
             this.APa_BetegKeresVegrehajt_bt.TabIndex = 2;
             this.APa_BetegKeresVegrehajt_bt.Text = "Keres";
             this.APa_BetegKeresVegrehajt_bt.UseVisualStyleBackColor = true;
@@ -116,9 +116,9 @@ namespace MediSupp
             // Apa_BetegKeres_txb
             // 
             this.Apa_BetegKeres_txb.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Apa_BetegKeres_txb.Location = new System.Drawing.Point(183, 3);
+            this.Apa_BetegKeres_txb.Location = new System.Drawing.Point(182, 3);
             this.Apa_BetegKeres_txb.Name = "Apa_BetegKeres_txb";
-            this.Apa_BetegKeres_txb.Size = new System.Drawing.Size(895, 20);
+            this.Apa_BetegKeres_txb.Size = new System.Drawing.Size(892, 20);
             this.Apa_BetegKeres_txb.TabIndex = 3;
             // 
             // lb4
@@ -219,8 +219,8 @@ namespace MediSupp
             this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 39F));
             this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 329F));
             this.tableLayoutPanel7.Controls.Add(this.AktivBetegFelvetelVegrehajt_bt, 0, 0);
-            this.tableLayoutPanel7.Controls.Add(this.button2, 1, 0);
-            this.tableLayoutPanel7.Controls.Add(this.button3, 2, 0);
+            this.tableLayoutPanel7.Controls.Add(this.BetegElbocsajt_bt, 1, 0);
+            this.tableLayoutPanel7.Controls.Add(this.AktivBetegModositVegrehajt_bt, 2, 0);
             this.tableLayoutPanel7.Controls.Add(this.button4, 4, 0);
             this.tableLayoutPanel7.Controls.Add(this.button5, 5, 0);
             this.tableLayoutPanel7.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -242,25 +242,27 @@ namespace MediSupp
             this.AktivBetegFelvetelVegrehajt_bt.UseVisualStyleBackColor = true;
             this.AktivBetegFelvetelVegrehajt_bt.Click += new System.EventHandler(this.AktivBetegFelvetelVegrehajt_bt_Click);
             // 
-            // button2
+            // BetegElbocsajt_bt
             // 
-            this.button2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.button2.Location = new System.Drawing.Point(123, 3);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(114, 21);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Beteg elbocsájtása";
-            this.button2.UseVisualStyleBackColor = true;
+            this.BetegElbocsajt_bt.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.BetegElbocsajt_bt.Location = new System.Drawing.Point(123, 3);
+            this.BetegElbocsajt_bt.Name = "BetegElbocsajt_bt";
+            this.BetegElbocsajt_bt.Size = new System.Drawing.Size(114, 21);
+            this.BetegElbocsajt_bt.TabIndex = 1;
+            this.BetegElbocsajt_bt.Text = "Beteg elbocsájtása";
+            this.BetegElbocsajt_bt.UseVisualStyleBackColor = true;
+            this.BetegElbocsajt_bt.Click += new System.EventHandler(this.BetegElbocsajt_bt_Click);
             // 
-            // button3
+            // AktivBetegModositVegrehajt_bt
             // 
-            this.button3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.button3.Location = new System.Drawing.Point(243, 3);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(114, 21);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "Módosítás";
-            this.button3.UseVisualStyleBackColor = true;
+            this.AktivBetegModositVegrehajt_bt.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.AktivBetegModositVegrehajt_bt.Location = new System.Drawing.Point(243, 3);
+            this.AktivBetegModositVegrehajt_bt.Name = "AktivBetegModositVegrehajt_bt";
+            this.AktivBetegModositVegrehajt_bt.Size = new System.Drawing.Size(114, 21);
+            this.AktivBetegModositVegrehajt_bt.TabIndex = 2;
+            this.AktivBetegModositVegrehajt_bt.Text = "Módosítás";
+            this.AktivBetegModositVegrehajt_bt.UseVisualStyleBackColor = true;
+            this.AktivBetegModositVegrehajt_bt.Click += new System.EventHandler(this.AktivBetegModositVegrehajt_bt_Click);
             // 
             // button4
             // 
@@ -464,7 +466,7 @@ namespace MediSupp
             this.tableLayoutPanel3.ColumnCount = 3;
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 83.33334F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 124F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 128F));
             this.tableLayoutPanel3.Controls.Add(this.label1, 0, 0);
             this.tableLayoutPanel3.Controls.Add(this.KezeloOrvos_cbx, 1, 0);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -483,7 +485,7 @@ namespace MediSupp
             this.label1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.label1.Location = new System.Drawing.Point(3, 14);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(174, 13);
+            this.label1.Size = new System.Drawing.Size(173, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "Kezelő orvos:";
             this.label1.UseWaitCursor = true;
@@ -491,7 +493,7 @@ namespace MediSupp
             // KezeloOrvos_cbx
             // 
             this.KezeloOrvos_cbx.FormattingEnabled = true;
-            this.KezeloOrvos_cbx.Location = new System.Drawing.Point(183, 3);
+            this.KezeloOrvos_cbx.Location = new System.Drawing.Point(182, 3);
             this.KezeloOrvos_cbx.Name = "KezeloOrvos_cbx";
             this.KezeloOrvos_cbx.Size = new System.Drawing.Size(883, 21);
             this.KezeloOrvos_cbx.TabIndex = 1;
@@ -539,17 +541,14 @@ namespace MediSupp
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel7;
         private System.Windows.Forms.Button AktivBetegFelvetelVegrehajt_bt;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button BetegElbocsajt_bt;
+        private System.Windows.Forms.Button AktivBetegModositVegrehajt_bt;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
         public System.Windows.Forms.Label AktivBetegSzulHely_lb;
         public System.Windows.Forms.Label AktivBetegSzulIdo_lb;
-        private System.Windows.Forms.DateTimePicker FelvetelIdopontja_dt;
-        private System.Windows.Forms.DateTimePicker ElbocsajtasIdopontja_dt;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox AktivBetegPanasza_txb;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel6;
@@ -562,5 +561,8 @@ namespace MediSupp
         public System.Windows.Forms.TextBox AktivBetegKezeles_txb;
         public System.Windows.Forms.TextBox Apa_BetegKeres_txb;
         public System.Windows.Forms.ComboBox KezeloOrvos_cbx;
+        public System.Windows.Forms.TextBox AktivBetegPanasza_txb;
+        public System.Windows.Forms.DateTimePicker FelvetelIdopontja_dt;
+        public System.Windows.Forms.DateTimePicker ElbocsajtasIdopontja_dt;
     }
 }

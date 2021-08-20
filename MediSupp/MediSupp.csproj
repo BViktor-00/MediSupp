@@ -61,7 +61,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="PatientClasses\AktivBetegFelvetelIdeje.cs" />
+    <Compile Include="PatientClasses\AktivBetegAdatok.cs" />
     <Compile Include="Windows\AktivBetegAdatFelvetelWindow.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -193,6 +193,8 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Korelozmeny\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
