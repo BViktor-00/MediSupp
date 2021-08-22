@@ -8,12 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.IO;
 
 namespace MediSupp
 {
     public partial class BetegekPanel : UserControl
     {
-
+        public List<string> StringList = new List<string>();
         
         public void DataGridFeltoltes()
         {
@@ -22,7 +23,7 @@ namespace MediSupp
             BetegFuggvenyek.BetegAdatLekeres();
             for (int i = 0; i < BetegFuggvenyek.BetegAdatLista.Count; i++)
             {
-                BetegDataList.Rows.Add(BetegFuggvenyek.BetegAdatLista[i].id, BetegFuggvenyek.BetegAdatLista[i].betegneve, BetegFuggvenyek.BetegAdatLista[i].betegszulhely, BetegFuggvenyek.BetegAdatLista[i].betegszulido, BetegFuggvenyek.BetegAdatLista[i].betegtajszam);
+                BetegDataList.Rows.Add( BetegFuggvenyek.BetegAdatLista[i].betegneve, BetegFuggvenyek.BetegAdatLista[i].betegszulhely, BetegFuggvenyek.BetegAdatLista[i].betegszulido, BetegFuggvenyek.BetegAdatLista[i].betegtajszam);
             }
         }
               
@@ -79,7 +80,7 @@ namespace MediSupp
 
         private void BetegAdatModositas_bt_Click_1(object sender, EventArgs e)
         {
-            string BetegTajSzam = Convert.ToString(BetegDataList.SelectedCells[4].Value);
+            string BetegTajSzam = Convert.ToString(BetegDataList.SelectedCells[3].Value);
             BetegAdatlapWindow BetegAdatokAblak = new BetegAdatlapWindow();
             BetegAdatokAblak.Show();
             try
@@ -127,6 +128,53 @@ namespace MediSupp
                 MessageBox.Show("A Keresett orvos nem található!");
 
             betegtajkeres_txb.Clear();
+        }
+
+        private void BetegDataList_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            string Tajszam = Convert.ToString(BetegDataList.Rows[e.RowIndex].Cells["tajszam"].Value.ToString());
+            KorelozmenyWindow Korelozmeny = new KorelozmenyWindow();
+            Korelozmeny.Show();
+
+            int index = 0;
+
+            try
+            {
+                for (int i = 0; i < BetegFuggvenyek.BetegAdatLista.Count; i++)
+                {
+                    if (BetegFuggvenyek.BetegAdatLista[i].betegtajszam == Tajszam)
+                    {
+                        Korelozmeny.KorelozmenyNev_lb.Text = BetegFuggvenyek.BetegAdatLista[i].betegneve;
+                        Korelozmeny.KorelozmenySzulHely_lb.Text = BetegFuggvenyek.BetegAdatLista[i].betegszulhely;
+                        Korelozmeny.KorelozmenySzulIdo_lb.Text = BetegFuggvenyek.BetegAdatLista[i].betegszulido;
+                        Korelozmeny.KorelozmenyTajszam_lb.Text = Convert.ToString(BetegFuggvenyek.BetegAdatLista[i].betegeletkor);
+                        Korelozmeny.KorelozmenyTajszam_lb.Text = BetegFuggvenyek.BetegAdatLista[i].betegtajszam;
+                        if (BetegFuggvenyek.BetegAdatLista[i].aktivbeteg == "aktiv")
+                            Korelozmeny.KorelozmenyAktivitas_lb.Text = "Aktív";
+                        else
+                        {
+                            Korelozmeny.KorelozmenyAktivitas_lb.Text = "Inkatív";
+                        }
+
+                        string readFile = File.ReadAllText(BetegFuggvenyek.BetegAdatLista[i].betegkorelozmeny);
+
+                        Korelozmeny.KorelozmenyInfo_rtxb.Text = readFile;
+
+                        index = i;
+                    }
+
+                }
+
+
+
+            }
+            catch (Exception)
+            {
+
+
+                MessageBox.Show("A művelet nem végrehajtható!", "HIBA", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
         }
     }
 }

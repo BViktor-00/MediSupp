@@ -125,7 +125,7 @@ namespace MediSupp
                  if(OrvosFuggvenyek.OrvosLista[i].orvospecset == orvosPecset)
                  {
                     Orvosok.Orvosnev_txb.Text = OrvosFuggvenyek.OrvosLista[i].nev;
-                    Orvosok.szakterulet_txb.Text = OrvosFuggvenyek.OrvosLista[i].szakterulet;
+                    Orvosok.szakterulet_cxb.Text = OrvosFuggvenyek.OrvosLista[i].szakterulet;
                     Orvosok.emailcim_txb.Text = OrvosFuggvenyek.OrvosLista[i].emailcim;
                     Orvosok.orvosipecsetszam_txb.Text = OrvosFuggvenyek.OrvosLista[i].orvospecset;
                     Orvosok.orvosid_lb.Text = Convert.ToString(OrvosFuggvenyek.OrvosLista[i].ID);

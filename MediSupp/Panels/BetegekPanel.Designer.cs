@@ -42,11 +42,11 @@ namespace MediSupp
             this.BetegAdatFrissites_bt = new System.Windows.Forms.Button();
             this.UjBetegFelvetele_bt = new System.Windows.Forms.Button();
             this.BetegDataList = new System.Windows.Forms.DataGridView();
-            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.betegnev = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.szulhely = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.szulido = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tajszam = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.korelozmenyinfo = new System.Windows.Forms.DataGridViewButtonColumn();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
@@ -90,7 +90,7 @@ namespace MediSupp
             this.tableLayoutPanel4.ColumnCount = 3;
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.62989F));
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 66.37011F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 189F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 190F));
             this.tableLayoutPanel4.Controls.Add(this.betegtajkeres_txb, 0, 1);
             this.tableLayoutPanel4.Controls.Add(this.label1, 0, 0);
             this.tableLayoutPanel4.Controls.Add(this.label5, 0, 1);
@@ -109,7 +109,7 @@ namespace MediSupp
             this.betegtajkeres_txb.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.betegtajkeres_txb.Location = new System.Drawing.Point(191, 29);
             this.betegtajkeres_txb.Name = "betegtajkeres_txb";
-            this.betegtajkeres_txb.Size = new System.Drawing.Size(366, 20);
+            this.betegtajkeres_txb.Size = new System.Drawing.Size(365, 20);
             this.betegtajkeres_txb.TabIndex = 6;
             // 
             // label1
@@ -137,7 +137,7 @@ namespace MediSupp
             // betegadatkereses_bt
             // 
             this.betegadatkereses_bt.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.betegadatkereses_bt.Location = new System.Drawing.Point(602, 29);
+            this.betegadatkereses_bt.Location = new System.Drawing.Point(601, 29);
             this.betegadatkereses_bt.Name = "betegadatkereses_bt";
             this.betegadatkereses_bt.Size = new System.Drawing.Size(106, 20);
             this.betegadatkereses_bt.TabIndex = 7;
@@ -213,23 +213,17 @@ namespace MediSupp
             // 
             this.BetegDataList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.BetegDataList.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.id,
             this.betegnev,
             this.szulhely,
             this.szulido,
-            this.tajszam});
+            this.tajszam,
+            this.korelozmenyinfo});
             this.BetegDataList.Dock = System.Windows.Forms.DockStyle.Fill;
             this.BetegDataList.Location = new System.Drawing.Point(3, 112);
             this.BetegDataList.Name = "BetegDataList";
             this.BetegDataList.Size = new System.Drawing.Size(756, 541);
             this.BetegDataList.TabIndex = 1;
-            // 
-            // id
-            // 
-            this.id.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.id.HeaderText = "ID";
-            this.id.Name = "id";
-            this.id.ReadOnly = true;
+            this.BetegDataList.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.BetegDataList_CellContentClick);
             // 
             // betegnev
             // 
@@ -259,6 +253,18 @@ namespace MediSupp
             this.tajszam.Name = "tajszam";
             this.tajszam.ReadOnly = true;
             // 
+            // korelozmenyinfo
+            // 
+            this.korelozmenyinfo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.korelozmenyinfo.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.korelozmenyinfo.HeaderText = "Kórelőzmény";
+            this.korelozmenyinfo.Name = "korelozmenyinfo";
+            this.korelozmenyinfo.ReadOnly = true;
+            this.korelozmenyinfo.Text = "Megtekint";
+            this.korelozmenyinfo.ToolTipText = "Megtekint";
+            this.korelozmenyinfo.UseColumnTextForButtonValue = true;
+            this.korelozmenyinfo.Width = 120;
+            // 
             // BetegekPanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -280,11 +286,6 @@ namespace MediSupp
 
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.DataGridView BetegDataList;
-        private System.Windows.Forms.DataGridViewTextBoxColumn id;
-        private System.Windows.Forms.DataGridViewTextBoxColumn betegnev;
-        private System.Windows.Forms.DataGridViewTextBoxColumn szulhely;
-        private System.Windows.Forms.DataGridViewTextBoxColumn szulido;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tajszam;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
         private System.Windows.Forms.Label label1;
@@ -296,5 +297,10 @@ namespace MediSupp
         private System.Windows.Forms.Button UjBetegFelvetele_bt;
         private System.Windows.Forms.TextBox betegtajkeres_txb;
         private System.Windows.Forms.Button betegadatkereses_bt;
+        private System.Windows.Forms.DataGridViewTextBoxColumn betegnev;
+        private System.Windows.Forms.DataGridViewTextBoxColumn szulhely;
+        private System.Windows.Forms.DataGridViewTextBoxColumn szulido;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tajszam;
+        private System.Windows.Forms.DataGridViewButtonColumn korelozmenyinfo;
     }
 }

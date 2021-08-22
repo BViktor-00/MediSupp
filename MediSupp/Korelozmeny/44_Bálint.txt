@@ -38,3 +38,19 @@ műtét
 Kontroll. Elbocsájtható.
 
 *****************************************************************************************
+Beteg Neve: Bálint
+Beteg Tajszáma: 44
+Kezelőorvos: Nagy tamas
+Felvétel időpontja: 2021. augusztus 22., vasárnap
+Felvétel időpontja: 2021. augusztus 25., szerda
+
+Egyéb információ a betegről:
+Parlagfu allergia
+
+Panasz
+
+
+Az orvos álltal felírt kezelés/vizsgálat
+
+
+*****************************************************************************************

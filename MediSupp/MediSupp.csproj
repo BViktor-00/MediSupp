@@ -61,6 +61,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Windows\KorelozmenyWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\KorelozmenyWindow.Designer.cs">
+      <DependentUpon>KorelozmenyWindow.cs</DependentUpon>
+    </Compile>
     <Compile Include="PatientClasses\AktivBetegAdatok.cs" />
     <Compile Include="Windows\AktivBetegAdatFelvetelWindow.cs">
       <SubType>Form</SubType>
@@ -123,6 +129,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Windows\KorelozmenyWindow.resx">
+      <DependentUpon>KorelozmenyWindow.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Windows\AktivBetegAdatFelvetelWindow.resx">
       <DependentUpon>AktivBetegAdatFelvetelWindow.cs</DependentUpon>
     </EmbeddedResource>

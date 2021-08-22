@@ -19,3 +19,40 @@ Foghúzás.
 Varratszedés.
 
 *****************************************************************************************
+Beteg Neve: Balázs
+Beteg Tajszáma: 77
+Kezelőorvos: Kovács Antal
+Felvétel időpontja: 2021. augusztus 22., vasárnap
+Felvétel időpontja: 2021. október 1., péntek
+
+Egyéb információ a betegről:
+
+
+Panasz
+aranyér
+
+Az orvos álltal felírt kezelés/vizsgálat
+Mutét
+
+
+fghfdhfhfghfg
+
+2563535353
+
+*****************************************************************************************
+Beteg Neve: Balázs
+Beteg Tajszáma: 77
+Kezelőorvos: Nagy Géza
+Felvétel időpontja: 2021. augusztus 22., vasárnap
+Felvétel időpontja: 2021. augusztus 22., vasárnap
+
+Egyéb információ a betegről:
+
+
+Panasz
+
+
+Az orvos álltal felírt kezelés/vizsgálat
+
+
+*****************************************************************************************

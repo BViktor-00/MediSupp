@@ -20,3 +20,21 @@ Mai nappal betegállományba lett véve.
 A panaszok elmúltak , a beteget gyógyultnak nyílvánítom.
 
 *****************************************************************************************
+Beteg Neve: Ádám
+Beteg Tajszáma: 55
+Kezelőorvos: Nagy Géza
+Felvétel időpontja: 2021. augusztus 22., vasárnap
+Felvétel időpontja: 2021. augusztus 24., kedd
+
+Egyéb információ a betegről:
+Szédülés
+
+Panasz
+Gyakori fejfájás
+
+Az orvos álltal felírt kezelés/vizsgálat
+Vérnyomáscsökkento
+
+segített neki.
+
+*****************************************************************************************

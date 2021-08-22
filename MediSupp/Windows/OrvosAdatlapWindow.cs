@@ -28,11 +28,19 @@ namespace MediSupp
 
         public void Clear()
         {
-            Orvosnev_txb.Clear();
-            szakterulet_txb.Clear();
+            Orvosnev_txb.Clear();            
             emailcim_txb.Clear();
             orvosipecsetszam_txb.Clear();
            
+        }
+
+        private void SzakteruletFeltoltes()
+        {
+            StreamReader Olvas = new StreamReader("szakterulet.txt", Encoding.UTF8);
+            while(!Olvas.EndOfStream)
+            {
+                szakterulet_cxb.Items.Add(Olvas.ReadLine());
+            }
         }
 
 
@@ -40,12 +48,13 @@ namespace MediSupp
         public OrvosAdatlapWindow()
         {
             InitializeComponent();
+            SzakteruletFeltoltes();
         }
 
 
         private void OrvosokFeltoltes_bt_Click(object sender, EventArgs e)
         {
-            OrvosFuggvenyek.OrvosAdatfeltoltes(Orvosnev_txb.Text, szakterulet_txb.Text, emailcim_txb.Text,orvosipecsetszam_txb.Text);
+            OrvosFuggvenyek.OrvosAdatfeltoltes(Orvosnev_txb.Text, szakterulet_cxb.Text, emailcim_txb.Text,orvosipecsetszam_txb.Text);
             Clear();
             this.Close();
             Orvosok_panel OrvosPanel = new Orvosok_panel();
@@ -60,7 +69,7 @@ namespace MediSupp
         private void orvosadatmodositasvegrahajt_bt_Click(object sender, EventArgs e)
         {
           
-            OrvosFuggvenyek.OrvosAdatModositas(Orvosnev_txb.Text, szakterulet_txb.Text, emailcim_txb.Text, orvosipecsetszam_txb.Text, Convert.ToInt32(orvosid_lb.Text));
+            OrvosFuggvenyek.OrvosAdatModositas(Orvosnev_txb.Text, szakterulet_cxb.Text, emailcim_txb.Text, orvosipecsetszam_txb.Text, Convert.ToInt32(orvosid_lb.Text));
             this.Close();
         }
 
@@ -68,6 +77,11 @@ namespace MediSupp
         private void orvosid_lb_Click(object sender, EventArgs e)
         {
 
+
+        }
+
+        private void OrvosAdatlapWindow_Load(object sender, EventArgs e)
+        {
 
         }
     }

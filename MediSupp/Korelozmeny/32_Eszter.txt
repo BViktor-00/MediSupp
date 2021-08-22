@@ -16,3 +16,19 @@ Az orvos álltal felírt kezelés/vizsgálat
 Gyógyszerek és pihenés.
 
 *****************************************************************************************
+Beteg Neve: Eszter
+Beteg Tajszáma: 32
+Kezelőorvos: Kertész András
+Felvétel időpontja: 2021. augusztus 22., vasárnap
+Felvétel időpontja: 2021. augusztus 23., hétfő
+
+Egyéb információ a betegről:
+-
+
+Panasz
+
+
+Az orvos álltal felírt kezelés/vizsgálat
+
+
+*****************************************************************************************

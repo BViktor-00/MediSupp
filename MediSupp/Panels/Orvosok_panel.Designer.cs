@@ -31,12 +31,6 @@ namespace MediSupp
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.DataListOrvosok = new System.Windows.Forms.DataGridView();
-            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.orvosneve = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.szakterulet = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.emailcim = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pecsetszam = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.betegek = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
@@ -48,6 +42,11 @@ namespace MediSupp
             this.OrvosAdatModositas_bt = new System.Windows.Forms.Button();
             this.AdatokFrissitese_bt = new System.Windows.Forms.Button();
             this.UjOrvos_bt = new System.Windows.Forms.Button();
+            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.orvosneve = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.szakterulet = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.emailcim = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pecsetszam = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DataListOrvosok)).BeginInit();
             this.tableLayoutPanel3.SuspendLayout();
@@ -79,56 +78,13 @@ namespace MediSupp
             this.orvosneve,
             this.szakterulet,
             this.emailcim,
-            this.pecsetszam,
-            this.betegek});
+            this.pecsetszam});
             this.DataListOrvosok.Dock = System.Windows.Forms.DockStyle.Fill;
             this.DataListOrvosok.Location = new System.Drawing.Point(3, 114);
             this.DataListOrvosok.Name = "DataListOrvosok";
             this.DataListOrvosok.Size = new System.Drawing.Size(756, 542);
             this.DataListOrvosok.TabIndex = 1;
             this.DataListOrvosok.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataListOrvosok_CellContentClick);
-            // 
-            // id
-            // 
-            this.id.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.id.HeaderText = "ID";
-            this.id.Name = "id";
-            this.id.ReadOnly = true;
-            // 
-            // orvosneve
-            // 
-            this.orvosneve.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.orvosneve.HeaderText = "Orvos Neve";
-            this.orvosneve.Name = "orvosneve";
-            this.orvosneve.ReadOnly = true;
-            // 
-            // szakterulet
-            // 
-            this.szakterulet.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.szakterulet.HeaderText = "Szakterület";
-            this.szakterulet.Name = "szakterulet";
-            this.szakterulet.ReadOnly = true;
-            // 
-            // emailcim
-            // 
-            this.emailcim.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.emailcim.HeaderText = "Email cím";
-            this.emailcim.Name = "emailcim";
-            this.emailcim.ReadOnly = true;
-            // 
-            // pecsetszam
-            // 
-            this.pecsetszam.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.pecsetszam.HeaderText = "Orvosi pecsétszám";
-            this.pecsetszam.Name = "pecsetszam";
-            this.pecsetszam.ReadOnly = true;
-            // 
-            // betegek
-            // 
-            this.betegek.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.betegek.HeaderText = "Betegek";
-            this.betegek.Name = "betegek";
-            this.betegek.ReadOnly = true;
             // 
             // tableLayoutPanel3
             // 
@@ -150,7 +106,7 @@ namespace MediSupp
             this.tableLayoutPanel2.ColumnCount = 3;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.62989F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 66.37011F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 189F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 190F));
             this.tableLayoutPanel2.Controls.Add(this.label1, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.label5, 0, 1);
             this.tableLayoutPanel2.Controls.Add(this.keresettorvos_txb, 1, 1);
@@ -191,15 +147,15 @@ namespace MediSupp
             this.keresettorvos_txb.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.keresettorvos_txb.Location = new System.Drawing.Point(191, 29);
             this.keresettorvos_txb.Name = "keresettorvos_txb";
-            this.keresettorvos_txb.Size = new System.Drawing.Size(366, 20);
+            this.keresettorvos_txb.Size = new System.Drawing.Size(365, 20);
             this.keresettorvos_txb.TabIndex = 2;
             // 
             // orvoskeresvegrehajt_bt
             // 
             this.orvoskeresvegrehajt_bt.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.orvoskeresvegrehajt_bt.Location = new System.Drawing.Point(563, 29);
+            this.orvoskeresvegrehajt_bt.Location = new System.Drawing.Point(562, 29);
             this.orvoskeresvegrehajt_bt.Name = "orvoskeresvegrehajt_bt";
-            this.orvoskeresvegrehajt_bt.Size = new System.Drawing.Size(184, 20);
+            this.orvoskeresvegrehajt_bt.Size = new System.Drawing.Size(185, 20);
             this.orvoskeresvegrehajt_bt.TabIndex = 3;
             this.orvoskeresvegrehajt_bt.Text = "Keres";
             this.orvoskeresvegrehajt_bt.UseVisualStyleBackColor = true;
@@ -269,6 +225,41 @@ namespace MediSupp
             this.UjOrvos_bt.UseVisualStyleBackColor = true;
             this.UjOrvos_bt.Click += new System.EventHandler(this.UjOrvos_bt_Click);
             // 
+            // id
+            // 
+            this.id.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.id.HeaderText = "ID";
+            this.id.Name = "id";
+            this.id.ReadOnly = true;
+            // 
+            // orvosneve
+            // 
+            this.orvosneve.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.orvosneve.HeaderText = "Orvos Neve";
+            this.orvosneve.Name = "orvosneve";
+            this.orvosneve.ReadOnly = true;
+            // 
+            // szakterulet
+            // 
+            this.szakterulet.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.szakterulet.HeaderText = "Szakterület";
+            this.szakterulet.Name = "szakterulet";
+            this.szakterulet.ReadOnly = true;
+            // 
+            // emailcim
+            // 
+            this.emailcim.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.emailcim.HeaderText = "Email cím";
+            this.emailcim.Name = "emailcim";
+            this.emailcim.ReadOnly = true;
+            // 
+            // pecsetszam
+            // 
+            this.pecsetszam.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.pecsetszam.HeaderText = "Orvosi pecsétszám";
+            this.pecsetszam.Name = "pecsetszam";
+            this.pecsetszam.ReadOnly = true;
+            // 
             // Orvosok_panel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -290,12 +281,6 @@ namespace MediSupp
 
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         public System.Windows.Forms.DataGridView DataListOrvosok;
-        private System.Windows.Forms.DataGridViewTextBoxColumn id;
-        private System.Windows.Forms.DataGridViewTextBoxColumn orvosneve;
-        private System.Windows.Forms.DataGridViewTextBoxColumn szakterulet;
-        private System.Windows.Forms.DataGridViewTextBoxColumn emailcim;
-        private System.Windows.Forms.DataGridViewTextBoxColumn pecsetszam;
-        private System.Windows.Forms.DataGridViewTextBoxColumn betegek;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
         private System.Windows.Forms.Button OrvosTorlese_bt;
@@ -307,5 +292,10 @@ namespace MediSupp
         private System.Windows.Forms.TextBox keresettorvos_txb;
         private System.Windows.Forms.Button orvoskeresvegrehajt_bt;
         private System.Windows.Forms.Button UjOrvos_bt;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn orvosneve;
+        private System.Windows.Forms.DataGridViewTextBoxColumn szakterulet;
+        private System.Windows.Forms.DataGridViewTextBoxColumn emailcim;
+        private System.Windows.Forms.DataGridViewTextBoxColumn pecsetszam;
     }
 }

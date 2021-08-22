@@ -185,33 +185,21 @@ namespace MediSupp
             {
                 string modositas = $"UPDATE beteg " +
                     $"SET kezeloorvos = @kezeloorvos," +
+                    $"betegkorelozmeny = @betegkorelozmeny," +
                     $"aktivbeteg = @aktivbeteg " +
                     $"WHERE betegtajszam = {betegtajszam}";
 
                 using (SqlCommand Parancs = new SqlCommand(modositas, Csatlakozas))
                 {
                     Parancs.Parameters.AddWithValue("@kezeloorvos", "nincs");
+                    Parancs.Parameters.AddWithValue("@betegkorelozmeny",MappaEleresiUtvonal );
                     Parancs.Parameters.AddWithValue("@aktivbeteg", "inaktiv");
                     Csatlakozas.Open();
                     Parancs.ExecuteNonQuery();
                 }
 
             }
-
-            using (SqlConnection Csatlakozas = new SqlConnection(AdatbazisInfo.ServerInfo))
-            {
-                string modositas = $"INSERT INTO betegkorelozmenytabla VALUES (@betegtajszam,@eleresiutvonal)";
-                using (SqlCommand Parancs = new SqlCommand(modositas, Csatlakozas))
-
-                {
-                    Parancs.Parameters.AddWithValue("@betegtajszam", betegtajszam);
-                    Parancs.Parameters.AddWithValue("@eleresiutvonal", MappaEleresiUtvonal);
-                    Csatlakozas.Open();
-                    Parancs.ExecuteNonQuery();
-                }
-
-            }
-
+           
         }
 
         public AktivBetegAdatFelvetel()

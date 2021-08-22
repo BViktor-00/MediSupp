@@ -43,6 +43,7 @@ namespace MediSupp
             orvosok1.Hide();
             betegekPanel1.Show();
             aktivBetegekPanel1.Hide();
+            BetegFuggvenyek.BetegAdatLekeres();
         }
 
         private void AktivBetegekAdatkezelese_bt_Click(object sender, EventArgs e)
