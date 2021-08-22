@@ -11,7 +11,7 @@ namespace MediSupp
 {
     class BetegFuggvenyek
     {
-
+       
         public static List<BetegAdatok> BetegAdatLista = new List<BetegAdatok>();
         public static List<AktivBetegAdatok> AktivBetegSegedLista = new List<AktivBetegAdatok>();
        

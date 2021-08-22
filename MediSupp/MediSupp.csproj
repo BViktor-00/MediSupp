@@ -61,6 +61,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DoctorData.cs" />
     <Compile Include="Windows\KorelozmenyWindow.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -119,13 +120,13 @@
     <Compile Include="Windows\OrvosAdatlapWindow.Designer.cs">
       <DependentUpon>OrvosAdatlapWindow.cs</DependentUpon>
     </Compile>
-    <Compile Include="DoctorClasses\OrvosAdatok.cs" />
-    <Compile Include="DoctorClasses\OrvosFuggvenyek.cs" />
-    <Compile Include="Panels\Orvosok_panel.cs">
+    <Compile Include="DoctorClasses\Doctor.cs" />
+    <Compile Include="DoctorClasses\DoctorRepository.cs" />
+    <Compile Include="Panels\DoctorPanel.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Panels\Orvosok_panel.Designer.cs">
-      <DependentUpon>Orvosok_panel.cs</DependentUpon>
+    <Compile Include="Panels\DoctorPanel.Designer.cs">
+      <DependentUpon>DoctorPanel.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -156,8 +157,8 @@
     <EmbeddedResource Include="Windows\OrvosAdatlapWindow.resx">
       <DependentUpon>OrvosAdatlapWindow.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Panels\Orvosok_panel.resx">
-      <DependentUpon>Orvosok_panel.cs</DependentUpon>
+    <EmbeddedResource Include="Panels\DoctorPanel.resx">
+      <DependentUpon>DoctorPanel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

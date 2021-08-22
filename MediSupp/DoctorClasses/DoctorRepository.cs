@@ -11,11 +11,10 @@ namespace MediSupp
 {
 
     
-    public class OrvosFuggvenyek
+    public class DoctorRepository
     {
        
-        public static List<OrvosAdatok> OrvosLista = new List<OrvosAdatok>();
-
+        
         public static void OrvosAdatfeltoltes(string nev, string szakterulet, string emailcim,string pecsetszam)
         {
             try
@@ -46,33 +45,27 @@ namespace MediSupp
             }
         }
 
-        public static void OrvosAdatAdatLekeres()
+        //change name to getDoctors
+        public List<Doctor> OrvosAdatAdatLekeres()
 
         {
-            try
-            {
-                using (SqlConnection Csatlakozas = new SqlConnection(AdatbazisInfo.ServerInfo))
+            List<Doctor> orvosLista = new List<Doctor>();
+            using (SqlConnection Csatlakozas = new SqlConnection(AdatbazisInfo.ServerInfo))
                 {
                     string lekerdezes = "SELECT * FROM orvos";
                     using (SqlCommand Parancs = new SqlCommand(lekerdezes, Csatlakozas))
                     {
                         Csatlakozas.Open();
                         SqlDataReader LekerdezesParancs = Parancs.ExecuteReader();
+                        
                         while (LekerdezesParancs.Read())
                         {
-                           OrvosLista.Add(new OrvosAdatok(Convert.ToInt32(LekerdezesParancs["Id"]), Convert.ToString(LekerdezesParancs["orvosneve"]), Convert.ToString(LekerdezesParancs["szakterulet"]), Convert.ToString(LekerdezesParancs["emailcim"]),Convert.ToString(LekerdezesParancs["pecsetszam"]), Convert.ToString(LekerdezesParancs["betegek"])));
+                           orvosLista.Add(new Doctor(Convert.ToInt32(LekerdezesParancs["Id"]), Convert.ToString(LekerdezesParancs["orvosneve"]), Convert.ToString(LekerdezesParancs["szakterulet"]), Convert.ToString(LekerdezesParancs["emailcim"]),Convert.ToString(LekerdezesParancs["pecsetszam"]), Convert.ToString(LekerdezesParancs["betegek"])));
                         }
                     }
 
                 }
-            }
-            catch (Exception)
-            {
-
-                MessageBox.Show("Hiba a kiolvasás során!", "HIBA", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-
-
+            return orvosLista;
         }
 
         public static void OrvosAdatModositas(string nev, string szakterulet, string emailcim, string pecsetszam,int orvosid)

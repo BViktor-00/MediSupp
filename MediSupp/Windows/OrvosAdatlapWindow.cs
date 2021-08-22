@@ -16,15 +16,15 @@ namespace MediSupp
     {
         Orvosok_panel OrvosTabla = new Orvosok_panel();
 
-        public void DataGridFeltoltes()
+        /*public void DataGridFeltoltes()
         {
             OrvosTabla.DataListOrvosok.Rows.Clear();
-            OrvosFuggvenyek.OrvosAdatAdatLekeres();
-            for (int i = 0; i < OrvosFuggvenyek.OrvosLista.Count; i++)
+            doctorData.OrvosAdatAdatLekeres();
+            for (int i = 0; i < doctorData.OrvosLista.Count; i++)
             {
-               OrvosTabla.DataListOrvosok.Rows.Add(OrvosFuggvenyek.OrvosLista[i].ID, OrvosFuggvenyek.OrvosLista[i].nev, OrvosFuggvenyek.OrvosLista[i].szakterulet, OrvosFuggvenyek.OrvosLista[i].emailcim, OrvosFuggvenyek.OrvosLista[i].betegek);
+               OrvosTabla.DataListOrvosok.Rows.Add(doctorData.OrvosLista[i].ID, doctorData.OrvosLista[i].nev, doctorData.OrvosLista[i].szakterulet, doctorData.OrvosLista[i].emailcim, doctorData.OrvosLista[i].betegek);
             }
-        }
+        }*/
 
         public void Clear()
         {
@@ -54,11 +54,10 @@ namespace MediSupp
 
         private void OrvosokFeltoltes_bt_Click(object sender, EventArgs e)
         {
-            OrvosFuggvenyek.OrvosAdatfeltoltes(Orvosnev_txb.Text, szakterulet_cxb.Text, emailcim_txb.Text,orvosipecsetszam_txb.Text);
+            DoctorRepository.OrvosAdatfeltoltes(Orvosnev_txb.Text, szakterulet_cxb.Text, emailcim_txb.Text,orvosipecsetszam_txb.Text);
             Clear();
             this.Close();
-            Orvosok_panel OrvosPanel = new Orvosok_panel();
-            OrvosPanel.DataGridFeltoltes();                       
+                             
         }
 
         private void orvosokkilepes_bt_Click(object sender, EventArgs e)
@@ -69,7 +68,7 @@ namespace MediSupp
         private void orvosadatmodositasvegrahajt_bt_Click(object sender, EventArgs e)
         {
           
-            OrvosFuggvenyek.OrvosAdatModositas(Orvosnev_txb.Text, szakterulet_cxb.Text, emailcim_txb.Text, orvosipecsetszam_txb.Text, Convert.ToInt32(orvosid_lb.Text));
+            DoctorRepository.OrvosAdatModositas(Orvosnev_txb.Text, szakterulet_cxb.Text, emailcim_txb.Text, orvosipecsetszam_txb.Text, Convert.ToInt32(orvosid_lb.Text));
             this.Close();
         }
 

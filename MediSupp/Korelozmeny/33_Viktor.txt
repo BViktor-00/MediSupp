@@ -14,3 +14,19 @@ Az orvos álltal felírt kezelés/vizsgálat
 2 hét nyaralás
 
 *****************************************************************************************
+Beteg Neve: Viktor
+Beteg Tajszáma: 33
+Kezelőorvos: Kertész András
+Felvétel időpontja: 2021. augusztus 22., vasárnap
+Felvétel időpontja: 2021. augusztus 26., csütörtök
+
+Egyéb információ a betegről:
+-
+
+Panasz
+fasza kivan 
+
+Az orvos álltal felírt kezelés/vizsgálat
+pihenj köcsög
+
+*****************************************************************************************

@@ -12,10 +12,11 @@ using System.IO;
 
 namespace MediSupp.Panels
 {
+
+   
     public partial class AktivBetegekPanel : UserControl
     {
-        
-        
+        DoctorData doctorData = new DoctorData();
 
         public void AktivBetegAdatModositas()
         {
@@ -62,11 +63,11 @@ namespace MediSupp.Panels
 
                 }
 
-                for (int i = 0; i < OrvosFuggvenyek.OrvosLista.Count; i++)
+                for (int i = 0; i < doctorData.doctorsList.Count; i++)
                 {
-                    if (OrvosFuggvenyek.OrvosLista[i].orvospecset == OrvosPecsetszam)
+                    if (doctorData.doctorsList[i].orvospecset == OrvosPecsetszam)
                     {
-                        AktivBetegWindow.KezeloOrvos_cbx.Text = OrvosFuggvenyek.OrvosLista[i].nev;
+                        AktivBetegWindow.KezeloOrvos_cbx.Text = doctorData.doctorsList[i].nev;
                     }
 
                 }
@@ -82,10 +83,10 @@ namespace MediSupp.Panels
         public void AktivBetegDataGridFeltoltes()
         {
             AktivBetegDataGrid.Rows.Clear();            
-            OrvosFuggvenyek.OrvosLista.Clear();
+            doctorData.doctorsList.Clear();
             BetegFuggvenyek.AktivBetegSegedLista.Clear();
             BetegFuggvenyek.BetegAdatLista.Clear();
-            OrvosFuggvenyek.OrvosAdatAdatLekeres();         
+            doctorData.getDoctors();         
             BetegFuggvenyek.AktivBetegAdatLekeres();
             BetegFuggvenyek.AktivBetegSegedListaFeltoltes();
 
@@ -100,11 +101,11 @@ namespace MediSupp.Panels
                 string KezeloOrvos = BetegFuggvenyek.BetegAdatLista[i].kezeloorvos;
                 string BetegTajszama = BetegFuggvenyek.BetegAdatLista[i].betegtajszam;
                 
-                for(int j =0;j < OrvosFuggvenyek.OrvosLista.Count;j++)
+                for(int j =0;j < doctorData.doctorsList.Count;j++)
                 {
-                    if(OrvosFuggvenyek.OrvosLista[j].orvospecset == KezeloOrvos)
+                    if(doctorData.doctorsList[j].orvospecset == KezeloOrvos)
                     {
-                        Orvos = OrvosFuggvenyek.OrvosLista[j].nev;
+                        Orvos = doctorData.doctorsList[j].nev;
                     }
                 }
                  

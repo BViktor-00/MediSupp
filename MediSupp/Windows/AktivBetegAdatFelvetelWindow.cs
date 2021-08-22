@@ -15,6 +15,8 @@ namespace MediSupp
     public partial class AktivBetegAdatFelvetel : Form
     {
 
+        DoctorData doctorData = new DoctorData();
+
         public void Apa_Betegkeres()
         {
             bool letezik = false;
@@ -45,11 +47,11 @@ namespace MediSupp
             Apa_BetegKeres_txb.Clear();
         }
 
-        public void KezeloOrvosListaFeltoltes()
+        public void KezelodoctorsListFeltoltes()
         {
-            for (int i = 0; i < OrvosFuggvenyek.OrvosLista.Count; i++)
+            for (int i = 0; i < doctorData.doctorsList.Count; i++)
             {
-                KezeloOrvos_cbx.Items.Add(OrvosFuggvenyek.OrvosLista[i].nev);
+                KezeloOrvos_cbx.Items.Add(doctorData.doctorsList[i].nev);
 
             }
         }
@@ -58,11 +60,11 @@ namespace MediSupp
         {
             string OrvosPecset = "";
 
-            for (int i = 0; i < OrvosFuggvenyek.OrvosLista.Count; i++)
+            for (int i = 0; i < doctorData.doctorsList.Count; i++)
             {
-                if (OrvosFuggvenyek.OrvosLista[i].nev == KezeloOrvos_cbx.Text)
+                if (doctorData.doctorsList[i].nev == KezeloOrvos_cbx.Text)
                 {
-                    OrvosPecset = OrvosFuggvenyek.OrvosLista[i].orvospecset;
+                    OrvosPecset = doctorData.doctorsList[i].orvospecset;
                 }
             }
 
@@ -92,11 +94,11 @@ namespace MediSupp
         {
 
             string kezeloorvos = "";
-            for(int i = 0; i < OrvosFuggvenyek.OrvosLista.Count;i++)
+            for(int i = 0; i < doctorData.doctorsList.Count;i++)
             {
-                if(OrvosFuggvenyek.OrvosLista[i].nev == kezeloorvosnev)
+                if(doctorData.doctorsList[i].nev == kezeloorvosnev)
                 {
-                    kezeloorvos = OrvosFuggvenyek.OrvosLista[i].orvospecset;
+                    kezeloorvos = doctorData.doctorsList[i].orvospecset;
                 }
             }
 
@@ -205,7 +207,7 @@ namespace MediSupp
         public AktivBetegAdatFelvetel()
         {
             InitializeComponent();
-            KezeloOrvosListaFeltoltes();
+            KezelodoctorsListFeltoltes();
             BetegFuggvenyek.BetegAdatLekeres();
         }
 

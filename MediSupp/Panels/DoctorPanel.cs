@@ -15,15 +15,17 @@ namespace MediSupp
 {
     public partial class Orvosok_panel : UserControl
     {
-
+        private DoctorData doctorData = new DoctorData();
         public void DataGridFeltoltes()
         {
             DataListOrvosok.Rows.Clear();
-            OrvosFuggvenyek.OrvosLista.Clear();
-            OrvosFuggvenyek.OrvosAdatAdatLekeres();
-            for (int i = 0; i < OrvosFuggvenyek.OrvosLista.Count; i++)
+            doctorData.doctorsList.Clear();
+            //DoctorData.doctorsList.Clear();
+            doctorData.getDoctors();
+            //DoctorRepository.OrvosAdatAdatLekeres();
+            for (int i = 0; i < doctorData.doctorsList.Count; i++)
             {
-                DataListOrvosok.Rows.Add(OrvosFuggvenyek.OrvosLista[i].ID, OrvosFuggvenyek.OrvosLista[i].nev, OrvosFuggvenyek.OrvosLista[i].szakterulet, OrvosFuggvenyek.OrvosLista[i].emailcim,OrvosFuggvenyek.OrvosLista[i].orvospecset, OrvosFuggvenyek.OrvosLista[i].betegek);
+                DataListOrvosok.Rows.Add(doctorData.doctorsList[i].ID, doctorData.doctorsList[i].nev, doctorData.doctorsList[i].szakterulet, doctorData.doctorsList[i].emailcim, doctorData.doctorsList[i].orvospecset, doctorData.doctorsList[i].betegek);
             }
         }
 
@@ -78,15 +80,17 @@ namespace MediSupp
         {
             bool letezik = false;
 
-            for (int i = 0; i < OrvosFuggvenyek.OrvosLista.Count; i++)
+            for (int i = 0; i < doctorData.doctorsList.Count; i++)
             {
-                if (OrvosFuggvenyek.OrvosLista[i].orvospecset == keresettorvos_txb.Text)
+                if (doctorData.doctorsList[i].orvospecset == keresettorvos_txb.Text)
                 {
+
+                    //ciklus nélkül megoldani a végén
                     DataListOrvosok.Rows.Clear();
-                    OrvosFuggvenyek.OrvosLista.Clear();
-                    OrvosFuggvenyek.OrvosAdatAdatLekeres();
-                    
-                    DataListOrvosok.Rows.Add(OrvosFuggvenyek.OrvosLista[i].ID, OrvosFuggvenyek.OrvosLista[i].nev, OrvosFuggvenyek.OrvosLista[i].szakterulet, OrvosFuggvenyek.OrvosLista[i].emailcim, OrvosFuggvenyek.OrvosLista[i].orvospecset, OrvosFuggvenyek.OrvosLista[i].betegek);
+                    doctorData.doctorsList.Clear();
+                    doctorData.getDoctors();
+
+                    DataListOrvosok.Rows.Add(doctorData.doctorsList[i].ID, doctorData.doctorsList[i].nev, doctorData.doctorsList[i].szakterulet, doctorData.doctorsList[i].emailcim, doctorData.doctorsList[i].orvospecset, doctorData.doctorsList[i].betegek);
                     
                     letezik = true;
 
@@ -120,15 +124,15 @@ namespace MediSupp
              string orvosPecset = Convert.ToString(DataListOrvosok.SelectedCells[4].Value);
             OrvosAdatlapWindow Orvosok = new OrvosAdatlapWindow();
             Orvosok.Show();
-             for(int i =0; i <OrvosFuggvenyek.OrvosLista.Count;i++ )
+             for(int i =0; i < doctorData.doctorsList.Count; i++ )
              {
-                 if(OrvosFuggvenyek.OrvosLista[i].orvospecset == orvosPecset)
+                 if(doctorData.doctorsList[i].orvospecset == orvosPecset)
                  {
-                    Orvosok.Orvosnev_txb.Text = OrvosFuggvenyek.OrvosLista[i].nev;
-                    Orvosok.szakterulet_cxb.Text = OrvosFuggvenyek.OrvosLista[i].szakterulet;
-                    Orvosok.emailcim_txb.Text = OrvosFuggvenyek.OrvosLista[i].emailcim;
-                    Orvosok.orvosipecsetszam_txb.Text = OrvosFuggvenyek.OrvosLista[i].orvospecset;
-                    Orvosok.orvosid_lb.Text = Convert.ToString(OrvosFuggvenyek.OrvosLista[i].ID);
+                    Orvosok.Orvosnev_txb.Text = doctorData.doctorsList[i].nev;
+                    Orvosok.szakterulet_cxb.Text = doctorData.doctorsList[i].szakterulet;
+                    Orvosok.emailcim_txb.Text = doctorData.doctorsList[i].emailcim;
+                    Orvosok.orvosipecsetszam_txb.Text = doctorData.doctorsList[i].orvospecset;
+                    Orvosok.orvosid_lb.Text = Convert.ToString(doctorData.doctorsList[i].ID);
                  }
              }
 

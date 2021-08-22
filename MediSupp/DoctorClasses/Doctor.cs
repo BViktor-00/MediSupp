@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MediSupp
 {
-    public class OrvosAdatok
+    public class Doctor
     {
         private int _ID;
         private string _nev;
@@ -94,7 +94,7 @@ namespace MediSupp
         }
 
 
-        public OrvosAdatok(int ID, string nev, string szakterulet, string emailcim, string orvospecset, string betegek)
+        public Doctor(int ID, string nev, string szakterulet, string emailcim, string orvospecset, string betegek)
         {
             this.ID = ID;
             this.nev = nev;
